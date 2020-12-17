@@ -48,19 +48,6 @@ const bags = {
   },
 }
 
-// Create table bags ( id serial primary key, 
-// 				   	reference varchar(255) not null, 
-//            type varchar(255) not null,
-//            handle_type varchar(255) not null,
-//            dimension varchar(255) not null,
-// 				   	img_path varchar(255) not null, 
-// 				   	retail_price varchar(255) not null, 
-// 				   	wholesale_price varchar(255) not null,
-// 				   	quantity_wholesale_price int not null,
-// 				   	available_quantity int not null,
-// 				   	creation_date date not null
-// 				  )
-
 const feedback = {
   id: { 
     type: DataTypes.INTEGER,
@@ -79,13 +66,26 @@ const feedback = {
     type: DataTypes.STRING,
     allowNull: false
   },
+  to_allow: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false
+  }
 }
 
-// create table feedbacks ( id serial not null, 
-// 					   	name varchar(255) not null, 
-// 					   	email varchar(255) not null, 
-// 					   	feedback_text varchar(255) not null
-// 					  )
+const admin_users = {
+  id: { 
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
+  },
+  email: { 
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  password: { 
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+}
 
-
-module.exports = { bags, feedback }
+module.exports = { bags, feedback, admin_users }
