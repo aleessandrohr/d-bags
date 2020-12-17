@@ -13,4 +13,9 @@ const bagsValuesValidator = yup.object().shape({
   // creation_date: yup.string().required()
 })
 
-module.exports = { bagsValuesValidator }
+const adminValuesValidator = yup.object().shape({
+  email: yup.string().email().required(),
+  password: yup.string().min(8).required()
+})
+
+module.exports = { bagsValuesValidator, adminValuesValidator }
