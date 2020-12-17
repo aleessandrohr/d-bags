@@ -19,19 +19,41 @@ async function initDatabase(){
   const { QueryTypes, DataTypes } = require("sequelize")
   let db = await connect()
 
+  // Função que cria a tabela desejada
   async function creatTableBags(db, name){
     try {
       const queryInterface = db.getQueryInterface()
-      let { bags, feedback } = require("../schemes/tableScheme")
-      let tableScheme = (name == 'bags') ? bags : feedback
-
-      results = await queryInterface.createTable(name, tableScheme)
+      let { bags, feedback, admin_users } = require("../schemes/tableScheme")
+      let tableScheme = undefined
+      switch (name){
+        case 'bags': 
+          tableScheme = bags
+          break
+        case 'feedback': 
+          tableScheme = feedback
+          break
+        case 'admin_users': 
+          tableScheme = admin_users
+          break
+      }
+      results = await queryInterface.createTable(name, tableScheme, {logging: false})
       console.log(`>> Tabela ${name} criada com sucesso.\n`)
 
     } catch (error) {
       console.log(`\n!! Houve um error ao criar a tabela ${name} !!`)
       console.log(error)
     }
+  }
+  // Função que verificar a tabela desejada
+  async function tableExists(table = ""){
+    let queryText = `SELECT EXISTS(SELECT FROM information_schema.tables WHERE table_name = '${table}' )`
+    let results = await db.query(queryText, { type: QueryTypes.SELECT, logging: false })
+    if (!results[0].exists) {
+      console.log(`!! Tabela '${table}' não existe, será criada agora !!`)
+      return false
+    } 
+
+    return true
   }
 
   try {
@@ -43,24 +65,8 @@ async function initDatabase(){
     console.log(error)
     return 
   }
-  
-  // Query apra verificar se a tabela 'bags' existe
-  let queryText = "SELECT EXISTS(SELECT FROM information_schema.tables WHERE table_name = 'bags' )"
-  let results = await db.query(queryText, { type: QueryTypes.SELECT, logging: false })
-
-  // Se NÃO existir, criarar
-  if (!results[0].exists) {
-    console.log("!! Tabela 'bags' não existe, será criada agora !!")
-    await creatTableBags(db, 'bags')
-  }
-
-  // Query apra verificar se a tabela 'feedbacks' existe
-  queryText = "SELECT EXISTS(SELECT FROM information_schema.tables WHERE table_name = 'feedbacks' )"
-  results = await db.query(queryText, { type: QueryTypes.SELECT, logging: false })
-
-  if (!results[0].exists) {
-    console.log("!! Tabela 'feedbacks' não existe, será criada agora !!")
-    await creatTableBags(db, 'feedbacks')
-  }
+  if (!await tableExists("bags")) await creatTableBags(db, 'bags')
+  if (!await tableExists("feedbacks")) await creatTableBags(db, 'feedbacks')
+  if (!await tableExists("admin_users")) await creatTableBags(db, 'admin_users')
 }
 module.exports = { connect, initDatabase }
