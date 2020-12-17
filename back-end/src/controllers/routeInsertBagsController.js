@@ -1,18 +1,24 @@
 async function routeInserBags(req, res){
   const fs = require("fs")
   const path = require("path")
-  const insertBags = require("../models/inserBags")
+  const insertBags = require("../models/insertBags")
   
   let { files, body: values } = req
   
   console.log("Passou aqui")
-  // console.log(files)
+  console.log(files.length)
   // console.log(values)
 
   // Função para deletar as imagens indeseajdas
   function deleteImg(files){
     files.map(file => {
-      fs.unlinkSync(path.resolve(__dirname, "..", "..", "img", "bags", file.filename))
+      let path_img = path.resolve(__dirname, "..", "..", "img", "bags", file.filename)
+      fs.unlink(path_img, err => { 
+        if (err){
+          console.log(`!! Error ao apagar a imagem ${file.filename} !! `)
+          console.log(err)
+        }
+      })
     })
   }
   
@@ -24,6 +30,11 @@ async function routeInserBags(req, res){
   
   // Função para checar os nomes da imagem
   async function checkImage(files){
+    // É preciso ter no maximo é no mínimo 3 imagens
+    if (files.length != 3)  {
+      deleteImg(files)
+      return false
+    } 
     // Armazenar os nomes das imagens
     let nameFiles = files.map(file => {
       let part_filename = file.filename.split("_")
@@ -43,28 +54,15 @@ async function routeInserBags(req, res){
   let imagePaths = files.map(file => file.path) // Retonar os "paths" da imagem
   // Retorna uma string com os "paths" concatenado e separado por ;(ponto e virgula)
   imagePathsConcatenated = imagePaths.reduce((concat, file) => concat += ";"+file)
-  console.log("Paths: ", imagePathsConcatenated)
+  // console.log("Paths: ", imagePathsConcatenated)
 
-  values.img_path = imagePathsConcatenated
   let date = new Date()
-  // values.creation_date = `${day}-${month}-${year}`
+  values.img_path = imagePathsConcatenated
   values.creation_date = date
-
+ 
   console.log(values)
-  if (!await insertBags(values)) return res.status(500).send({"okay": "false", "msg": "Internal error!"})
+  // if (!await insertBags(values)) return res.status(500).send({"okay": "false", "msg": "Internal error!"})
 
-  // res.send({"okay": "true", "message": "Cadastrado"})
   return res.send({"okay": "true", "msg": "Successfully register!"})
 } 
 module.exports = routeInserBags
-
-// reference
-// type
-// handle_type
-// dimension
-// img_path
-// retail_price
-// wholesale_price
-// quantity_wholesale_price
-// available_quantity
-// creation_date
