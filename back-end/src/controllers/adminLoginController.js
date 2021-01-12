@@ -12,7 +12,7 @@ async function adminLoginController(req, res){
   let verificationResult = await adminVerification(values)
   if( !await verificationResult[0] ) return res.status(400).send({"okay": "false", "message": "Invalid user"})
 
-  let token = jwt.sign({id: verificationResult[1]}, process.env.TOKEN_SECRET, {expiresIn: 1 * 1 * 60})
+  let token = jwt.sign({admin: "not"}, process.env.TOKEN_SECRET, {expiresIn: 30 * 1 * 60})
 
   return res.send({"okay": "true", "message": "Successfully logged in", "token": token})
 }
