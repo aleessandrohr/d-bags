@@ -2,17 +2,17 @@ import { useState, useEffect, Dispatch, SetStateAction } from "react";
 
 type Response<T> = [T, Dispatch<SetStateAction<T>>];
 
-export function usePersistedState<T>(
+export default function usePersistedState<T>(
   key: string,
-  defaultValue: T
+  initialState: T
 ): Response<T> {
-  const [state, setState] = useState(defaultValue);
+  const [state, setState] = useState<T>(initialState);
 
   useEffect(() => {
-    const theme = localStorage.getItem(key);
+    const storageValue = localStorage.getItem(key);
 
-    if (theme) {
-      setState(JSON.parse(theme));
+    if (storageValue) {
+      setState(JSON.parse(storageValue));
     }
   }, []);
 
