@@ -1,7 +1,7 @@
 import { AppProps } from "next/app";
 import { useCallback } from "react";
-import { ThemeProvider, DefaultTheme } from "styled-components";
 import usePersistedState from "../hooks/usePersistedState";
+import { ThemeProvider, DefaultTheme } from "styled-components";
 
 import Header from "../components/Header/index";
 
