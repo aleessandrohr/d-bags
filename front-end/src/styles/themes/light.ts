@@ -1,13 +1,15 @@
 export default {
   title: "light",
   colors: {
-    primary: "#ffffff",
-    secondary: "#1b1f23",
-    nav: "#FDFEFE ",
-    switch: "#9067C6",
-    "switch-color": "#CAC4CE",
-    "a-primary": "#ffffff",
-    "a-secondary": "#000000",
-    gray: "#24292e",
+    default: "#fafafa",
+    primary: "rgba(0, 0, 0, 0.87)",
+    secondary: "#fff",
+    "button-active": "rgba(0, 0, 0, 0.95)",
+    "button-disabled": "rgba(0, 0, 0, 0.26)",
+    "button-hover": "rgba(0, 0, 0, 0.04)",
+    nav: "#fff",
+    scroll: "#fff",
+    switch: "#8A84E2",
+    "switch-color": "#c6c6c6",
   },
 };
