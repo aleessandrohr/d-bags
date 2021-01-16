@@ -12,13 +12,26 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${(props) => props.theme.colors.primary};
-    color: ${(props) => props.theme.colors.secondary};
+    background: ${(props) => props.theme.colors.default};
+    color: ${(props) => props.theme.colors.primary};
     font-family: 'Roboto', sans-serif;
   }
 
   ul {
     list-style: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: ${(props) => props.theme.colors.scroll};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: ${(props) => props.theme.colors.primary};
   }
 
   @media(max-width: 768px) {
