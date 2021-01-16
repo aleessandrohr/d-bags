@@ -9,14 +9,29 @@ export const Container = styled.nav`
   align-items: center;
   justify-content: space-between;
   background-color: ${(props) => props.theme.colors.nav};
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-  padding: 0.4rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  padding: 0.2rem;
+  z-index: 2;
 
   > a {
     padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    color: ${(props) => props.theme.colors.primary};
     text-decoration: none;
-    color: ${(props) => props.theme.colors.secondary};
-    font-size: 1.6rem;
+
+    > h1 {
+      font-size: 2rem;
+    }
+
+    > .img {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
   }
 
   > .switch {
