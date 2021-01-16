@@ -15,7 +15,9 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <Container>
       <Link href="/">
-        <a>D-bags</a>
+        <a>
+          <h1>D'bags</h1>
+        </a>
       </Link>
       <Switch
         onChange={toggleTheme}
