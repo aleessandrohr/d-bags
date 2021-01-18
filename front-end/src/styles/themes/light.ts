@@ -11,5 +11,6 @@ export default {
     scroll: "#fff",
     switch: "#8A84E2",
     "switch-color": "#c6c6c6",
+    yellow: "#F1C40F",
   },
 };
