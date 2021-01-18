@@ -5,12 +5,19 @@ import { BagsType } from "../../@types/BagsType";
 
 import { Container, Product, Description } from "./styles";
 
-const NewsBags: React.FC<BagsType> = ({
-  handle_type,
-  img_path,
+interface Props extends BagsType {
+  direction: boolean;
+}
+
+const NewsBags: React.FC<Props> = ({
   name,
   retail_price,
   type,
+  handle_type,
+  length,
+  width,
+  height,
+  img_path,
   direction,
 }) => {
   const image = img_path.split(";")[2];
@@ -22,10 +29,10 @@ const NewsBags: React.FC<BagsType> = ({
 
   return (
     <Container style={{ flexDirection: direction ? "row-reverse" : "row" }}>
-      <div className="product">
+      <div>
         <Product>
           <Image
-            src={`${image}`}
+            src={image}
             alt={name}
             width={260}
             height={320}
@@ -33,16 +40,21 @@ const NewsBags: React.FC<BagsType> = ({
           />
         </Product>
       </div>
-      <div className="description">
+      <div>
         <Description style={{ textAlign: direction ? "right" : "left" }}>
           <h1>{name}</h1>
           <ul>
             <li>{type}</li>
             <li>{handle_type}</li>
           </ul>
+          <ul>
+            <li>Comprimento: {length} cm</li>
+            <li>Largura: {width} cm</li>
+            <li>Altura: {height} cm</li>
+          </ul>
           <span className="oldPrice">de: R$ {oldPrice}</span>
           <span className="newPrice">por: R$ {newPrice}</span>
-          <div className="button">
+          <div className="link">
             <Link href="/">
               <a>Confira</a>
             </Link>
