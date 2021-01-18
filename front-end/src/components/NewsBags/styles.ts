@@ -8,6 +8,8 @@ export const Container = styled.div`
 `;
 
 export const Product = styled.div`
+  text-align: left;
+
   .image {
     border-radius: 7px;
   }
@@ -46,7 +48,7 @@ export const Description = styled.div`
     font-weight: 300;
   }
 
-  > .button {
+  > .link {
     margin: 0 2.4rem;
 
     > a {
