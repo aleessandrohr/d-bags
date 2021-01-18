@@ -14,10 +14,10 @@ export const Container = styled.nav`
   z-index: 2;
 
   > a {
-    padding-left: 1rem;
     display: flex;
     align-items: center;
     color: ${(props) => props.theme.colors.primary};
+    padding-left: 1rem;
     text-decoration: none;
 
     > h1 {
