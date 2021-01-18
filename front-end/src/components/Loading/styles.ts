@@ -7,10 +7,10 @@ export const Container = styled.div`
   right: 0;
   bottom: 0;
   background: ${(props) => props.theme.colors.default};
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 3;
 
   > div {
     width: 0.6rem;
