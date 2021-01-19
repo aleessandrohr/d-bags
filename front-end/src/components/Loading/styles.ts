@@ -1,15 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: ${(props) => props.theme.colors.default};
   display: flex;
   align-items: center;
   justify-content: center;
+  background: ${(props) => props.theme.colors.default};
+  margin-top: 2.4rem;
   z-index: 3;
 
   > div {
