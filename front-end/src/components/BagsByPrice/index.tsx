@@ -1,23 +1,29 @@
-import Image from "next/image";
-
 import { BagsType } from "../../@types/BagsType";
+
+import BagByPrice from "../BagByPrice/index";
 
 import { Container } from "./styles";
 
-const BagsByPrice: React.FC<BagsType> = ({ name, img_path, retail_price }) => {
-  const image = img_path.split(";")[2];
-  const price = retail_price.toFixed(2).replace(".", ",");
+interface Props {
+  bagsByPrice?: BagsType[];
+}
 
+const BagsByPrice: React.FC<Props> = ({ bagsByPrice }) => {
   return (
     <Container>
-      <Image
-        src={image}
-        alt={name}
-        width={180}
-        height={180}
-        className="image"
-      />
-      <span>por: R$ {price}</span>
+      <h1>
+        A partir de <span>R$80</span>
+      </h1>
+      <div className="bagsByPrice">
+        {bagsByPrice?.map((bag: BagsType, index) => (
+          <BagByPrice
+            name={bag.name}
+            img_path={bag.img_path}
+            retail_price={bag.retail_price}
+            key={index}
+          />
+        ))}
+      </div>
     </Container>
   );
 };
