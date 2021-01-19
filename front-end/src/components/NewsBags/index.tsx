@@ -1,66 +1,31 @@
-import Link from "next/link";
-import Image from "next/image";
-
 import { BagsType } from "../../@types/BagsType";
 
-import { Container, Product, Description } from "./styles";
+import NewBag from "../NewBag/index";
 
-interface Props extends BagsType {
-  direction: boolean;
+import { Container } from "./styles";
+
+interface Props {
+  newBags?: BagsType[];
 }
 
-const NewsBags: React.FC<Props> = ({
-  name,
-  retail_price,
-  type,
-  handle_type,
-  length,
-  width,
-  height,
-  img_path,
-  direction,
-}) => {
-  const image = img_path.split(";")[2];
-
-  const oldPrice = ((10 / 100) * retail_price + retail_price)
-    .toFixed(2)
-    .replace(".", ",");
-  const newPrice = retail_price.toFixed(2).replace(".", ",");
-
+const NewsBags: React.FC<Props> = ({ newBags }) => {
   return (
-    <Container style={{ flexDirection: direction ? "row-reverse" : "row" }}>
-      <div>
-        <Product>
-          <Image
-            src={image}
-            alt={name}
-            width={260}
-            height={320}
-            className="image"
-          />
-        </Product>
-      </div>
-      <div>
-        <Description style={{ textAlign: direction ? "right" : "left" }}>
-          <h1>{name}</h1>
-          <ul>
-            <li>{type}</li>
-            <li>{handle_type}</li>
-          </ul>
-          <ul>
-            <li>Comprimento: {length} cm</li>
-            <li>Largura: {width} cm</li>
-            <li>Altura: {height} cm</li>
-          </ul>
-          <span className="oldPrice">de: R$ {oldPrice}</span>
-          <span className="newPrice">por: R$ {newPrice}</span>
-          <div className="link">
-            <Link href="/">
-              <a>Confira</a>
-            </Link>
-          </div>
-        </Description>
-      </div>
+    <Container>
+      <h1>NOVIDADES</h1>
+      {newBags?.map((bag: BagsType, index) => (
+        <NewBag
+          name={bag.name}
+          retail_price={bag.retail_price}
+          handle_type={bag.handle_type}
+          type={bag.type}
+          length={bag.length}
+          width={bag.width}
+          height={bag.height}
+          img_path={bag.img_path}
+          direction={index % 3 === 0 ? false : true}
+          key={index}
+        />
+      ))}
     </Container>
   );
 };
