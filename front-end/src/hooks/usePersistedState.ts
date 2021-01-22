@@ -4,9 +4,9 @@ type Response<T> = [T, Dispatch<SetStateAction<T>>];
 
 export default function usePersistedState<T>(
   key: string,
-  initialState: T
+  initial: T
 ): Response<T> {
-  const [state, setState] = useState<T>(initialState);
+  const [state, setState] = useState<T>(initial);
 
   useEffect(() => {
     const storageValue = localStorage.getItem(key);
