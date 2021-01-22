@@ -4,11 +4,12 @@ import usePersistedState from "../hooks/usePersistedState";
 import { ThemeProvider } from "styled-components";
 
 import Header from "../components/Header/index";
+import Footer from "../components/Footer/index";
 
 import light from "../styles/themes/light";
 import dark from "../styles/themes/dark";
 
-import GlobalStyle from "../styles/global";
+import GlobalStyle from "../styles/GlobalStyle";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const [theme, setTheme] = usePersistedState("theme", "light");
@@ -23,8 +24,9 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       <Head>
         <title>D'bags</title>
       </Head>
-      <Header toggleTheme={toggleTheme} />
+      <Header />
       <Component {...pageProps} />
+      <Footer toggleTheme={toggleTheme} />
       <GlobalStyle />
     </ThemeProvider>
   );
