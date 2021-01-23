@@ -23,7 +23,8 @@ export const Container = styled.nav`
       > a {
         color: ${(props) => props.theme.colors.primary};
         text-decoration: none;
-        font-size: 1.8em;
+        font-size: 2em;
+        font-weight: 600;
       }
 
       > button {
@@ -34,7 +35,7 @@ export const Container = styled.nav`
         > span {
           > i {
             color: ${(props) => props.theme.colors.primary};
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             cursor: pointer;
           }
         }
@@ -49,15 +50,14 @@ export const Container = styled.nav`
       > ul {
         display: flex;
         flex-direction: column;
-        padding: 0.4rem 0;
 
         > li {
-          padding: 0.5rem 0 0 0;
+          padding: 0.8rem 0 0 0;
 
           > a {
             color: ${(props) => props.theme.colors.primary};
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1.25em;
           }
         }
       }
