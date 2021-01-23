@@ -4,7 +4,7 @@ export default {
     default: "#fafafa",
     primary: "#000000",
     secondary: "#fff",
-    "button-active": "#00000095",
+    "button-active": "#000000",
     "button-disabled": "#00000025",
     "button-hover": "#00000005",
     switch: "#8A84E2",
@@ -12,5 +12,6 @@ export default {
     "scroll-y": "#fff",
     nav: "#fff",
     footer: "#fafafa",
+    image: "#f2f2f2",
   },
 };
