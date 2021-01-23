@@ -1,10 +1,12 @@
 import Error from "./_error";
 import useFetch from "../hooks/useFetch";
 import { Bags } from "../@types/Bags";
-import { ErrorFetcher } from "../@types/ErrorFetcher";
+import { ErrorFetch } from "../@types/ErrorFetch";
+
+import Loading from "../components/Loading/index";
+import NewBags from "../components/NewBags/index";
 
 import { Container, Initial } from "../styles/pages/Home";
-import { ErrorFetch } from "../@types/ErrorFetch";
 
 interface Props {
   newBags?: Bags[];
@@ -12,7 +14,7 @@ interface Props {
 }
 
 const Home: React.FC<Props> = () => {
-  const { data, error } = useFetch<Bags, ErrorFetch>(
+  const { data, error } = useFetch<Props, ErrorFetch>(
     "https://dbags.herokuapp.com/public/home"
   );
 
@@ -23,6 +25,13 @@ const Home: React.FC<Props> = () => {
   return (
     <Container>
       <Initial />
+      {!data ? (
+        <Loading />
+      ) : (
+        <>
+          <NewBags newBags={data.newBags} />
+        </>
+      )}
     </Container>
   );
 };
