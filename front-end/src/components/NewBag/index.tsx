@@ -12,7 +12,6 @@ const NewBag: React.FC<Props> = ({
   name,
   retail_price,
   type,
-  handle_type,
   length,
   width,
   height,
@@ -40,13 +39,12 @@ const NewBag: React.FC<Props> = ({
       <Description style={{ textAlign: direction ? "right" : "left" }}>
         <h1>{name}</h1>
         <ul>
-          <li>{type}</li>
-          <li>{handle_type}</li>
-        </ul>
-        <ul>
           <li>
             {length}x{width}x{height}
           </li>
+        </ul>
+        <ul>
+          <li>{type}</li>
         </ul>
         <span className="oldPrice">de: R$ {oldPrice}</span>
         <br />
