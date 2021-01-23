@@ -37,6 +37,7 @@ export const Container = styled.nav`
 
       > .title {
         font-size: 2em;
+        font-weight: 600;
       }
     }
   }
