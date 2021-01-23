@@ -22,7 +22,7 @@ const Mobile: React.FC = () => {
   return (
     <Container>
       <div className="nav">
-        <Link href="/">
+        <Link href="/" scroll={false}>
           <a>D'bags</a>
         </Link>
         <button onClick={toggleItems}>

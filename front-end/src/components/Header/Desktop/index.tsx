@@ -21,7 +21,7 @@ const Desktop: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/" scroll={false}>
             <a className="title">D'bags</a>
           </Link>
         </li>
