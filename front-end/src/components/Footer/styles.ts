@@ -7,6 +7,7 @@ export const Container = styled.footer`
   align-items: center;
   justify-content: space-around;
   padding: 2rem 0;
+  z-index: 2;
 
   > .info {
     > h1 {

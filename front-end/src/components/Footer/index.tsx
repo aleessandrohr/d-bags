@@ -11,14 +11,13 @@ interface Props {
 const Footer: React.FC<Props> = ({ toggleTheme }) => {
   const { title, colors } = useContext(ThemeContext);
   const now = new Date();
+  const year = now.getFullYear();
 
   return (
     <Container>
       <div className="info">
         <h1>D'bags</h1>
-        <span>
-          &#169; {now.getFullYear()} D'bags. Todos os direitos reservados.
-        </span>
+        <span>&#169; {year} D'bags. Todos os direitos reservados.</span>
       </div>
       <div className="theme">
         <i className="far fa-moon"></i>
@@ -29,7 +28,7 @@ const Footer: React.FC<Props> = ({ toggleTheme }) => {
           uncheckedIcon={false}
           height={10}
           width={40}
-          handleDiameter={15}
+          handleDiameter={18}
           offColor={colors.switch}
           offHandleColor={colors["switch-color"]}
           onHandleColor={colors["switch-color"]}
