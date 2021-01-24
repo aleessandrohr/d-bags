@@ -13,9 +13,11 @@ export const Container = styled.div`
 `;
 
 export const Img = styled.div`
-  background-color: ${(props) => props.theme.colors.image};
-  border-radius: 7px;
-  cursor: pointer;
+  .image {
+    background-color: ${(props) => props.theme.colors.image};
+    border-radius: 7px;
+    cursor: pointer;
+  }
 `;
 
 export const Description = styled.div`
