@@ -5,6 +5,7 @@ import { ErrorFetch } from "../@types/ErrorFetch";
 
 import Loading from "../components/Loading/index";
 import NewBags from "../components/NewBags/index";
+import BagsByPrice from "../components/BagsByPrice/index";
 
 import { Container, Initial } from "../styles/pages/Home";
 
@@ -30,6 +31,7 @@ const Home: React.FC<Props> = () => {
       ) : (
         <>
           <NewBags newBags={data.newBags} />
+          <BagsByPrice bagsByPrice={data.bagsByPrice} />
         </>
       )}
     </Container>
