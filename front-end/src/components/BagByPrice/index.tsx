@@ -6,6 +6,7 @@ import { Container, Img, Description } from "./styles";
 
 const BagByPrice: React.FC<Bags> = ({ name, img_path, retail_price }) => {
   const image = img_path.split(";")[0];
+  const price = retail_price.toFixed(2).replace(".", ",");
 
   return (
     <Container>
@@ -17,6 +18,7 @@ const BagByPrice: React.FC<Bags> = ({ name, img_path, retail_price }) => {
           height={180}
           className="image"
         />
+        <span>por: R$ {price}</span>
       </Img>
       <Description>
         <div className="link">

@@ -9,10 +9,23 @@ export const Container = styled.div`
 `;
 
 export const Img = styled.div`
+  position: relative;
+
   .image {
     background-color: ${(props) => props.theme.colors.image};
     border-radius: 7px;
     cursor: pointer;
+  }
+
+  > span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 0.2rem 0.4rem;
+    font-weight: 600;
+    font-size: 1.2rem;
   }
 `;
 
