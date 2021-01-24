@@ -20,6 +20,7 @@ const BagsByPrice: React.FC<Props> = ({ bagsByPrice }) => {
             name={bag.name}
             retail_price={bag.retail_price}
             img_path={bag.img_path}
+            reference={bag.reference}
             key={index}
           />
         ))}
