@@ -17,7 +17,18 @@ export const Img = styled.div`
     cursor: pointer;
   }
 
-  > span {
+  > .discount {
+    position: absolute;
+    right: 0;
+    background-color: ${(props) => props.theme.colors["button-active"]};
+    color: ${(props) => props.theme.colors.secondary};
+    padding: 0.2rem 0.4rem;
+    border-radius: 10px 0px 10px 5px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  > .price {
     position: absolute;
     bottom: 0;
     left: 50%;
