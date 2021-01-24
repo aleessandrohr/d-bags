@@ -13,5 +13,6 @@ export default {
     nav: "#fff",
     footer: "#fafafa",
     image: "#f2f2f2",
+    yellow: "#F1C40F",
   },
 };
