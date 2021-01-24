@@ -42,8 +42,6 @@ const NewBag: React.FC<Props> = ({
           <li>
             {length}x{width}x{height}
           </li>
-        </ul>
-        <ul>
           <li>{type}</li>
         </ul>
         <span className="oldPrice">de: R$ {oldPrice}</span>

@@ -3,12 +3,19 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   padding: 1.5rem;
+
+  @media (max-width: 768px) {
+    display: unset;
+
+    > .measure-mobile {
+    }
+  }
 `;
 
 export const Img = styled.div`
   background-color: ${(props) => props.theme.colors.image};
   border-radius: 7px;
-  font-size: 1rem;
+  cursor: pointer;
 `;
 
 export const Description = styled.div`
@@ -19,7 +26,7 @@ export const Description = styled.div`
   }
 
   > ul {
-    padding: 0.5rem 0;
+    padding: 0.8rem 0 2rem;
 
     > li {
       font-size: 0.95rem;
@@ -35,7 +42,7 @@ export const Description = styled.div`
   }
 
   > .newPrice {
-    padding: 1rem 1.2rem;
+    padding: 0 1.2rem;
     font-size: 1.6rem;
     font-weight: 600;
   }
@@ -65,6 +72,18 @@ export const Description = styled.div`
         color: ${(props) => props.theme.colors.primary};
         border: 2px solid ${(props) => props.theme.colors.primary};
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 0;
+
+    > ul {
+      text-align: center;
     }
   }
 `;
