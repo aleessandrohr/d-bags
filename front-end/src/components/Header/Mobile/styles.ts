@@ -28,6 +28,7 @@ export const Container = styled.nav`
       }
 
       > button {
+        padding: 0 0.8rem;
         background-color: transparent;
         border-width: 0;
         outline: transparent;
@@ -45,7 +46,7 @@ export const Container = styled.nav`
     > .items {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 1s ease-in-out;
+      transition: max-height 0.6s ease-in-out;
 
       > ul {
         display: flex;
