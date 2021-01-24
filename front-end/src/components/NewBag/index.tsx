@@ -16,6 +16,7 @@ const NewBag: React.FC<Props> = ({
   width,
   height,
   img_path,
+  reference,
   direction,
 }) => {
   const image = img_path.split(";")[0];
@@ -48,7 +49,7 @@ const NewBag: React.FC<Props> = ({
         <br />
         <span className="newPrice">por: R$ {newPrice}</span>
         <div className="link">
-          <Link href="/" scroll={false}>
+          <Link href={`/bag/${reference}`}>
             <a>Confira</a>
           </Link>
         </div>

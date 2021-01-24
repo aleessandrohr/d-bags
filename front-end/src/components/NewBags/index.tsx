@@ -22,6 +22,7 @@ const NewBags: React.FC<Props> = ({ newBags }) => {
           width={bag.width}
           height={bag.height}
           img_path={bag.img_path}
+          reference={bag.reference}
           direction={index % 3 === 0 ? false : true}
           key={index}
         />
