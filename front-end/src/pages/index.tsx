@@ -1,5 +1,5 @@
 import Error from "./_error";
-import useFetch from "../hooks/useFetch";
+import { useFetch } from "../hooks/useFetch";
 import { Bags } from "../@types/Bags";
 import { ErrorFetch } from "../@types/ErrorFetch";
 
