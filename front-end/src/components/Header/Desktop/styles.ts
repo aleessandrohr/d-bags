@@ -8,7 +8,7 @@ export const Container = styled.nav`
   background-color: ${(props) => props.theme.colors.nav};
   color: ${(props) => props.theme.colors.primary};
   box-shadow: 3px 3px 3px #00000030;
-  padding: 0.8rem;
+  padding: 0.5rem;
   z-index: 2;
 
   > ul {
