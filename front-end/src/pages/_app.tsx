@@ -1,6 +1,6 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
-import usePersistedState from "../hooks/usePersistedState";
+import { usePersistedState } from "../hooks/usePersistedState";
 import { ThemeProvider } from "styled-components";
 
 import Header from "../components/Header/index";
