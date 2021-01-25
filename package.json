@@ -7,14 +7,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "latest",
-    "next-images": "^1.6.2",
+    "next": "^10.0.5",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-switch": "^6.0.0",
     "styled-components": "^5.0.0",
-    "swr": "^0.4.0",
-    "vercel": "^21.1.0"
+    "swr": "^0.4.0"
   },
   "devDependencies": {
     "@types/node": "12.0.12",
