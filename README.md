@@ -11,8 +11,6 @@ Uma loja de bolsas.
 
 Para acessar a página da aplicação apenas clique [aqui](https://d-bags.vercel.app).
 
----
-
 ## Obtendo o código
 
 Como pré-requisitos, é necessário instalar o [Node.js](https://nodejs.org/pt-br/download/) ou o [Yarn](https://classic.yarnpkg.com/en/docs/install) na última versão LTS.
