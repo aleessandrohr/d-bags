@@ -5,7 +5,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   background: ${(props) => props.theme.colors.default};
-  height: 25vh;
 
   > div {
     width: 0.6rem;
