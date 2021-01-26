@@ -27,7 +27,9 @@ const Home: React.FC<Props> = () => {
     <Container>
       <Initial />
       {!data ? (
-        <Loading />
+        <div className="loading">
+          <Loading />
+        </div>
       ) : (
         <>
           <NewBags newBags={data.newBags} />
