@@ -1,21 +1,21 @@
 # D'bags
 
-Uma loja de bolsas.
+A bag store.
 
 <p align="center">
     <img src="https://img.shields.io/github/license/alessandrohenriqueramos/D-bags?color=000" alt="license"/>
     <img src="https://img.shields.io/github/package-json/v/alessandrohenriqueramos/D-bags?color=000" alt="version">
 </p>
 
-## Acesse
+## Access
 
-Para acessar a página da aplicação apenas clique [aqui](https://d-bags.vercel.app).
+To access the application page just click [here](https://d-bags.vercel.app).
 
-## Obtendo o código
+## Getting the code
 
-Como pré-requisitos, é necessário instalar o [Node.js](https://nodejs.org/pt-br/download/) ou o [Yarn](https://classic.yarnpkg.com/en/docs/install) na última versão LTS.
+As prerequisites, it is necessary to install [Node.js](https://nodejs.org/en/download/) or [Yarn](https://classic.yarnpkg.com/en/docs/install) in the latest LTS version.
 
-Com essas aplicações instaladas, abra o terminal na pasta da aplicação. Logo em seguida, execute os seguintes comandos, em sequência:
+With these applications installed, open the terminal in the application folder. Then, execute the following commands, in sequence:
 
 ### Execute
 
@@ -24,10 +24,10 @@ git clone https://github.com/alessandrohenriqueramos/D-bags.git
 cd D-bags
 ```
 
-### No Windows / Mac / Linux:
+### Windows / Mac / Linux:
 
 ```
-npm install
+npm
 ```
 
 or
@@ -36,7 +36,7 @@ or
 yarn
 ```
 
-### Inicie o servidor:
+### Start the server:
 
 ```
 npm dev
@@ -48,7 +48,7 @@ or
 yarn dev
 ```
 
-### Espere abrir este URL no seu navegador:
+### Wait to open this URL in your browser:
 
 ```
 http://localhost:3000
