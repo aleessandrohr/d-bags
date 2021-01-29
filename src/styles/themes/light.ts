@@ -14,5 +14,6 @@ export default {
     footer: "#fafafa",
     image: "#f2f2f2",
     yellow: "#F1C40F",
+    loading: "#000",
   },
 };
