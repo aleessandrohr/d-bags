@@ -1,17 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Bags } from "../../@types/Bags";
+import { useImage } from "../../hooks/useImage";
+import { usePrice } from "../../hooks/usePrice";
+import { Bag } from "../../@types/Bag";
 
 import { Container, Img, Description } from "./styles";
 
-const BagByPrice: React.FC<Bags> = ({
+const BagByPrice: React.FC<Bag> = ({
   name,
   img_path,
   retail_price,
   reference,
 }) => {
-  const image = img_path.split(";")[0];
-  const price = retail_price.toFixed(2).replace(".", ",");
+  const image = useImage(img_path);
+  const { newPrice } = usePrice(retail_price);
 
   return (
     <Container>
@@ -24,7 +26,7 @@ const BagByPrice: React.FC<Bags> = ({
           className="image"
         />
         <span className="discount">-10%</span>
-        <span className="price">R$ {price}</span>
+        <span className="price">R$ {newPrice}</span>
       </Img>
       <Description>
         <div className="link">
