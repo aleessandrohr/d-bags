@@ -1,11 +1,11 @@
-import { Bags } from "../../@types/Bags";
+import { Bag } from "../../@types/Bag";
 
 import BagByPrice from "../BagByPrice";
 
 import { Container } from "./styles";
 
 interface Props {
-  bagsByPrice?: Bags[];
+  bagsByPrice?: Array<Bag>;
 }
 
 const BagsByPrice: React.FC<Props> = ({ bagsByPrice }) => {
@@ -15,7 +15,7 @@ const BagsByPrice: React.FC<Props> = ({ bagsByPrice }) => {
         A partir de <span>R$80</span>
       </h1>
       <div className="container">
-        {bagsByPrice?.map((bag: Bags, index) => (
+        {bagsByPrice?.map((bag: Bag, index) => (
           <BagByPrice
             name={bag.name}
             retail_price={bag.retail_price}
