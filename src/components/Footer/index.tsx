@@ -1,28 +1,30 @@
 import { useContext } from "react";
+import { Dispatch, SetStateAction } from "react";
 import Switch from "react-switch";
 import { ThemeContext } from "styled-components";
 
 import { Container } from "./styles";
 
 interface Props {
-  toggleTheme(): void;
+  setTheme: Dispatch<SetStateAction<string>>;
 }
 
-const Footer: React.FC<Props> = ({ toggleTheme }) => {
+const Footer: React.FC<Props> = ({ setTheme }) => {
   const { title, colors } = useContext(ThemeContext);
+
   const now = new Date();
   const year = now.getFullYear();
 
   return (
     <Container>
-      <div className="info">
+      <div className="footer">
         <h1>D'bags</h1>
         <span>&#169; {year} D'bags. Todos os direitos reservados.</span>
       </div>
       <div className="theme">
         <i className="far fa-moon"></i>
         <Switch
-          onChange={toggleTheme}
+          onChange={() => setTheme(title === "light" ? "dark" : "light")}
           checked={title === "dark"}
           checkedIcon={false}
           uncheckedIcon={false}
