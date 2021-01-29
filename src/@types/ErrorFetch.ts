@@ -1,4 +1,4 @@
 export interface ErrorFetch {
-  status: number;
-  statusText: string;
+  code: number;
+  message: string;
 }
