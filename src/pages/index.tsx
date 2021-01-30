@@ -1,31 +1,31 @@
 import Error from "./_error";
 import { useFetch } from "../hooks/useFetch";
-import { Bags } from "../@types/Bags";
+import { Bag } from "../@types/Bag";
 import { ErrorFetch } from "../@types/ErrorFetch";
 
 import Loading from "../components/Loading/index";
 import NewBags from "../components/NewBags/index";
 import BagsByPrice from "../components/BagsByPrice/index";
 
-import { Container, Initial } from "../styles/pages/Home";
+import { Container, Background } from "../styles/pages/Home";
 
-interface Props {
-  newBags?: Bags[];
-  bagsByPrice?: Bags[];
+interface Data {
+  newBags?: Array<Bag>;
+  bagsByPrice?: Array<Bag>;
 }
 
-const Home: React.FC<Props> = () => {
-  const { data, error } = useFetch<Props, ErrorFetch>(
+const Home: React.FC = () => {
+  const { data, error } = useFetch<Data, ErrorFetch>(
     "https://dbags.herokuapp.com/public/home"
   );
 
   if (error) {
-    return <Error statusCode={error.status} title={error.statusText} />;
+    return <Error status={error.code} message={error.message} />;
   }
 
   return (
     <Container>
-      <Initial />
+      <Background />
       {!data ? (
         <div className="loading">
           <Loading />
