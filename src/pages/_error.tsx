@@ -3,19 +3,19 @@ import Head from "next/head";
 import { Container } from "../styles/pages/Error";
 
 interface Props {
-  statusCode: number;
-  title: string;
+  status: number;
+  message: string;
 }
 
-const Error: React.FC<Props> = ({ statusCode, title }) => {
+const Error: React.FC<Props> = ({ status, message }) => {
   return (
     <Container>
       <Head>
-        <title>Error {statusCode}</title>
+        <title>Error {status}</title>
       </Head>
-      <h1>{statusCode}</h1>
+      <h1>{status}</h1>
       <span />
-      <h2>{title}</h2>
+      <h2>{message}</h2>
     </Container>
   );
 };
