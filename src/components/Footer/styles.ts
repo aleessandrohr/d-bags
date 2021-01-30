@@ -9,7 +9,7 @@ export const Container = styled.footer`
   padding: 2rem 0;
   z-index: 2;
 
-  > .info {
+  > .footer {
     > h1 {
       font-size: 1.6rem;
       font-weight: 600;
