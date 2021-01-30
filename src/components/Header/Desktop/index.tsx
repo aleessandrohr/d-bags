@@ -22,7 +22,7 @@ const Desktop: React.FC = () => {
         </li>
         <li>
           <Link href="/" scroll={false}>
-            <a className="title">D'bags</a>
+            <a className="logo">D'bags</a>
           </Link>
         </li>
         <li>
