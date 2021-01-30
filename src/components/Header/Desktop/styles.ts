@@ -5,8 +5,8 @@ export const Container = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  background-color: ${(props) => props.theme.colors.nav};
-  color: ${(props) => props.theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.nav};
+  color: ${({ theme }) => theme.colors.primary};
   box-shadow: 3px 3px 3px #00000030;
   padding: 0.5rem;
   z-index: 2;
@@ -22,7 +22,7 @@ export const Container = styled.nav`
       justify-content: center;
 
       > a {
-        color: ${(props) => props.theme.colors.primary};
+        color: ${({ theme }) => theme.colors.primary};
         text-decoration: none;
         font-size: 1.6em;
         display: flex;

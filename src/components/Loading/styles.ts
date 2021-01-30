@@ -11,11 +11,11 @@ export const Container = styled.div`
     width: 4rem;
     height: 4rem;
     margin: 8px;
-    border: 8px solid ${(props) => props.theme.colors.loading};
+    border: 8px solid ${({ theme }) => theme.colors.loading};
     border-radius: 50%;
     animation: loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: ${(props) => props.theme.colors.loading} transparent
-      transparent transparent;
+    border-color: ${({ theme }) => theme.colors.loading} transparent transparent
+      transparent;
   }
 
   > div:nth-child(1) {

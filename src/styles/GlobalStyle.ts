@@ -12,8 +12,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${(props) => props.theme.colors.default};
-    color: ${(props) => props.theme.colors.primary};
+    background: ${({ theme }) => theme.colors.default};
+    color: ${({ theme }) => theme.colors.primary};
     font-family: 'Roboto', sans-serif;
   }
 

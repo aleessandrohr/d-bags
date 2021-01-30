@@ -9,8 +9,8 @@ export const Container = styled.nav`
     left: 0;
     right: 0;
     display: unset;
-    background-color: ${(props) => props.theme.colors.nav};
-    color: ${(props) => props.theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.nav};
+    color: ${({ theme }) => theme.colors.primary};
     box-shadow: 3px 3px 3px #00000030;
     padding: 0.8rem;
     z-index: 2;
@@ -21,7 +21,7 @@ export const Container = styled.nav`
       justify-content: space-between;
 
       > a {
-        color: ${(props) => props.theme.colors.primary};
+        color: ${({ theme }) => theme.colors.primary};
         text-decoration: none;
         font-size: 2em;
         font-weight: 600;
@@ -35,7 +35,7 @@ export const Container = styled.nav`
 
         > span {
           > i {
-            color: ${(props) => props.theme.colors.primary};
+            color: ${({ theme }) => theme.colors.primary};
             font-size: 1.8rem;
             cursor: pointer;
           }
@@ -72,7 +72,7 @@ export const Container = styled.nav`
           padding: 0.8rem 0 0 0;
 
           > a {
-            color: ${(props) => props.theme.colors.primary};
+            color: ${({ theme }) => theme.colors.primary};
             text-decoration: none;
             font-size: 1.25em;
           }

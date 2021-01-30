@@ -14,7 +14,7 @@ export const Container = styled.div`
 
   > span {
     height: 40px;
-    border: 1px solid ${(props) => props.theme.colors.primary};
+    border: 1px solid ${({ theme }) => theme.colors.primary};
     opacity: 0.8;
   }
 

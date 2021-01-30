@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const Img = styled.div`
   .image {
-    background-color: ${(props) => props.theme.colors.image};
+    background-color: ${({ theme }) => theme.colors.image};
     border-radius: 7px;
     cursor: pointer;
   }
@@ -59,8 +59,8 @@ export const Description = styled.div`
       text-decoration: none;
       width: 6.8rem;
       height: 1.6rem;
-      background-color: ${(props) => props.theme.colors["button-active"]};
-      color: ${(props) => props.theme.colors.secondary};
+      background-color: ${({ theme }) => theme.colors["button-active"]};
+      color: ${({ theme }) => theme.colors.secondary};
       border-width: 0;
       outline: transparent;
       border-radius: 7px;
@@ -70,9 +70,9 @@ export const Description = styled.div`
       transition: background-color 0.5s ease, color 0.4s ease;
 
       &:hover {
-        background-color: ${(props) => props.theme.colors["button-hover"]};
-        color: ${(props) => props.theme.colors.primary};
-        border: 2px solid ${(props) => props.theme.colors.primary};
+        background-color: ${({ theme }) => theme.colors["button-hover"]};
+        color: ${({ theme }) => theme.colors.primary};
+        border: 2px solid ${({ theme }) => theme.colors.primary};
       }
     }
   }

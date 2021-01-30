@@ -17,7 +17,7 @@ export const Container = styled.div`
     }
 
     > span {
-      color: ${(props) => props.theme.colors.yellow};
+      color: ${({ theme }) => theme.colors.yellow};
     }
   }
 

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-  background-color: ${(props) => props.theme.colors.footer};
-  color: ${(props) => props.theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.footer};
+  color: ${({ theme }) => theme.colors.primary};
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -27,8 +27,8 @@ export const Container = styled.footer`
     align-items: center;
     justify-content: center;
     padding: 0.6rem 1rem;
-    background-color: ${(props) => props.theme.colors["button-hover"]};
-    border: 2px solid ${(props) => props.theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors["button-hover"]};
+    border: 2px solid ${({ theme }) => theme.colors.primary};
     border-radius: 7px;
 
     > i {
