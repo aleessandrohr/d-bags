@@ -43,10 +43,26 @@ export const Container = styled.nav`
       }
     }
 
-    > .items {
+    > .items-transitions-enter {
       max-height: 0;
+    }
+
+    > .items-transitions-enter-active {
+      max-height: 200px;
+      transition: max-height 800ms;
+    }
+
+    > .items-transitions-exit {
+      max-height: 200px;
+    }
+
+    > .items-transitions-exit-active {
+      max-height: 0;
+      transition: max-height 600ms;
+    }
+
+    > .items {
       overflow: hidden;
-      transition: max-height 0.6s ease-in-out;
 
       > ul {
         display: flex;
