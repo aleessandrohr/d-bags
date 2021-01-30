@@ -7,7 +7,6 @@ const Loading: React.FC = () => {
       <div />
       <div />
       <div />
-      <div />
     </Container>
   );
 };
