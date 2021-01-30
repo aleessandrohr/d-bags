@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Bags } from "../../@types/Bags";
+import { imageUrl } from "../../helpers/imageUrl";
+import { formattedPrice } from "../../helpers/formattedPrice";
+import { Bag } from "../../@types/Bag";
 
 import { Container, Img, Description } from "./styles";
 
-interface Props extends Bags {
+interface Props extends Bag {
   direction: boolean;
 }
 
@@ -19,12 +21,8 @@ const NewBag: React.FC<Props> = ({
   reference,
   direction,
 }) => {
-  const image = img_path.split(";")[0];
-
-  const oldPrice = ((10 / 100) * retail_price + retail_price)
-    .toFixed(2)
-    .replace(".", ",");
-  const newPrice = retail_price.toFixed(2).replace(".", ",");
+  const image = imageUrl(img_path);
+  const { oldPrice, newPrice } = formattedPrice(retail_price);
 
   return (
     <Container style={{ flexDirection: direction ? "row-reverse" : "row" }}>
