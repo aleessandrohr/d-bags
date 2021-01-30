@@ -2,14 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.main`
   > .loading {
-    height: 25vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 5rem;
   }
 `;
 
-export const Initial = styled.div`
+export const Background = styled.div`
   height: 100vh;
   background: url("background.jpg");
   background-size: cover;
