@@ -15,10 +15,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const [theme, setTheme] = usePersistedState("theme", "light");
   const currentTheme = theme === "light" ? light : dark;
 
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
-
   return (
     <ThemeProvider theme={currentTheme}>
       <Head>
@@ -26,7 +22,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
       <Header />
       <Component {...pageProps} />
-      <Footer toggleTheme={toggleTheme} />
+      <Footer setTheme={setTheme} />
       <GlobalStyle />
     </ThemeProvider>
   );
