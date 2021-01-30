@@ -4,44 +4,38 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${(props) => props.theme.colors.default};
+  position: relative;
 
   > div {
-    width: 0.6rem;
-    height: 2.2rem;
-    background: ${(props) => props.theme.colors.primary};
-    margin: 0 3px;
-    border-radius: 10px;
-    animation: loading 0.8s infinite;
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    margin: 8px;
+    border: 8px solid ${(props) => props.theme.colors.loading};
+    border-radius: 50%;
+    animation: loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: ${(props) => props.theme.colors.loading} transparent
+      transparent transparent;
+  }
+
+  > div:nth-child(1) {
+    animation-delay: -0.45s;
   }
 
   > div:nth-child(2) {
-    animation-delay: 0.1s;
+    animation-delay: -0.3s;
   }
 
   > div:nth-child(3) {
-    animation-delay: 0.2s;
-  }
-
-  > div:nth-child(4) {
-    animation-delay: 0.3s;
-  }
-
-  > div:nth-child(5) {
-    animation-delay: 0.4s;
+    animation-delay: -0.15s;
   }
 
   @keyframes loading {
     0% {
-      height: 0rem;
+      transform: rotate(0deg);
     }
-
-    50% {
-      height: 2.2rem;
-    }
-
     100% {
-      height: 0rem;
+      transform: rotate(360deg);
     }
   }
 `;
