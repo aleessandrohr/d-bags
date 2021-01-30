@@ -1,18 +1,18 @@
-import { Bags } from "../../@types/Bags";
+import { Bag } from "../../@types/Bag";
 
 import NewBag from "../NewBag/index";
 
 import { Container } from "./styles";
 
 interface Props {
-  newBags?: Bags[];
+  newBags?: Array<Bag>;
 }
 
 const NewBags: React.FC<Props> = ({ newBags }) => {
   return (
     <Container>
       <h1>NOVIDADES</h1>
-      {newBags?.map((bag: Bags, index) => (
+      {newBags?.map((bag: Bag, index) => (
         <NewBag
           name={bag.name}
           retail_price={bag.retail_price}
@@ -24,7 +24,7 @@ const NewBags: React.FC<Props> = ({ newBags }) => {
           img_path={bag.img_path}
           reference={bag.reference}
           direction={index % 3 === 0 ? false : true}
-          key={index}
+          key={bag.img_path}
         />
       ))}
     </Container>
