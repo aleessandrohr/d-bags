@@ -6,8 +6,8 @@ import { ThemeProvider } from "styled-components";
 import Header from "../components/Header/index";
 import Footer from "../components/Footer/index";
 
-import light from "../styles/themes/light";
-import dark from "../styles/themes/dark";
+import { light } from "../styles/themes/light";
+import { dark } from "../styles/themes/dark";
 
 import GlobalStyle from "../styles/GlobalStyle";
 
