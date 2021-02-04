@@ -9,5 +9,6 @@ export const Container = styled.div`
   > h1 {
     padding: 1.5rem;
     font-size: 3rem;
+    font-family: "Roboto Mono", monospace;
   }
 `;
