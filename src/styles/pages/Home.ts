@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.main`
-  > .loading {
-    padding: 5rem;
-  }
-`;
+export const Container = styled.main``;
 
 export const Background = styled.div`
   height: 100vh;
