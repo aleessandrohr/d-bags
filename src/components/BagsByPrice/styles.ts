@@ -12,20 +12,22 @@ export const Container = styled.div`
     font-weight: 600;
     font-family: "Roboto Mono", monospace;
 
-    @media (max-width: 768px) {
-      font-size: 2.2rem;
-    }
-
     > span {
       color: ${({ theme }) => theme.colors.yellow};
     }
   }
 
-  > .container {
+  > ul {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    > h1 {
+      font-size: 2.2rem;
+    }
   }
 `;
