@@ -1,13 +1,26 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.li`
   display: flex;
   padding: 1.5rem;
+
+  > .left {
+    align-items: flex-start;
+  }
+
+  > .right {
+    align-items: flex-end;
+  }
 
   @media (max-width: 768px) {
     display: unset;
 
-    > .measure-mobile {
+    > .left {
+      align-items: center;
+    }
+
+    > .right {
+      align-items: center;
     }
   }
 `;
@@ -21,6 +34,8 @@ export const Img = styled.div`
 `;
 
 export const Description = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 0 1rem;
 
   > h1 {
@@ -28,64 +43,69 @@ export const Description = styled.div`
   }
 
   > ul {
-    padding: 0.8rem 0 2rem;
+    padding: 1rem 0;
 
     > li {
-      font-size: 0.95rem;
-      font-weight: 300;
+      font-size: 1.2rem;
+      font-weight: 500;
     }
   }
 
   > .oldPrice {
-    padding: 0 0.8rem;
+    padding: 0.2rem 1rem;
     text-decoration: line-through;
     font-size: 1.2rem;
     font-weight: 300;
   }
 
   > .newPrice {
-    padding: 0 1.2rem;
+    padding: 0.2rem 1.2rem;
     font-size: 1.6rem;
     font-weight: 600;
   }
 
-  > .link {
-    padding: 1.5rem 3rem;
+  > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 7rem;
+    height: 1.8rem;
+    background-color: ${({ theme }) => theme.colors["button-active"]};
+    color: ${({ theme }) => theme.colors.secondary};
+    margin: 1.5rem 3rem;
+    border-width: 0;
+    outline: transparent;
+    border-radius: 7px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.4s ease;
 
-    > a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      width: 6.8rem;
-      height: 1.6rem;
-      background-color: ${({ theme }) => theme.colors["button-active"]};
-      color: ${({ theme }) => theme.colors.secondary};
-      border-width: 0;
-      outline: transparent;
-      border-radius: 7px;
-      font-family: "Roboto Mono", monospace;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.5s ease, color 0.4s ease;
-
-      &:hover {
-        background-color: ${({ theme }) => theme.colors["button-hover"]};
-        color: ${({ theme }) => theme.colors.primary};
-        border: 2px solid ${({ theme }) => theme.colors.primary};
-      }
+    &:hover {
+      background-color: ${({ theme }) => theme.colors["button-hover"]};
+      color: ${({ theme }) => theme.colors.primary};
+      border: 2px solid ${({ theme }) => theme.colors.primary};
     }
   }
 
   @media (max-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1rem 0;
+    padding: 0.8rem 0;
 
     > ul {
+      padding: 0.8rem 0;
       text-align: center;
+      > li {
+        font-size: 1.2rem;
+      }
+    }
+
+    > .oldPrice {
+      font-size: 1.4rem;
+    }
+
+    > .newPrice {
+      font-size: 1.8rem;
     }
   }
 `;

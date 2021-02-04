@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { imageUrl } from "../../helpers/imageUrl";
-import { formattedPrice } from "../../helpers/formattedPrice";
+import { imageUrl } from "../../helpers/imageUrl"; //temp
+import { formattedPrice } from "../../helpers/formattedPrice"; //temp
 import { Bag } from "../../@types/Bag";
 
 import { Container, Img, Description } from "./styles";
@@ -21,8 +21,8 @@ const NewBag: React.FC<Props> = ({
   reference,
   direction,
 }) => {
-  const image = imageUrl(img_path);
-  const { oldPrice, newPrice } = formattedPrice(retail_price);
+  const image = imageUrl(img_path); //temp
+  const { oldPrice, newPrice } = formattedPrice(retail_price); //temp
 
   return (
     <Container style={{ flexDirection: direction ? "row-reverse" : "row" }}>
@@ -35,7 +35,7 @@ const NewBag: React.FC<Props> = ({
           className="image"
         />
       </Img>
-      <Description style={{ textAlign: direction ? "right" : "left" }}>
+      <Description className={direction ? "right" : "left"}>
         <h1>{name}</h1>
         <ul>
           <li>
@@ -43,14 +43,11 @@ const NewBag: React.FC<Props> = ({
           </li>
           <li>{type}</li>
         </ul>
-        <span className="oldPrice">de: R$ {oldPrice}</span>
-        <br />
-        <span className="newPrice">por: R$ {newPrice}</span>
-        <div className="link">
-          <Link href={`/bag/${reference}`}>
-            <a>Confira</a>
-          </Link>
-        </div>
+        <span className="oldPrice">R$ {oldPrice}</span>
+        <span className="newPrice">R$ {newPrice}</span>
+        <Link href={`/bag/${reference}`}>
+          <a>Confira</a>
+        </Link>
       </Description>
     </Container>
   );
