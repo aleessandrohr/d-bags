@@ -6,8 +6,8 @@ const fetcher = async (url: string) => {
   if (response.status !== 200) {
     const error = {
       status: response.status,
-      message: response.statusText
-    }
+      message: response.statusText,
+    };
 
     throw error;
   }
@@ -18,7 +18,11 @@ const fetcher = async (url: string) => {
 };
 
 export function useFetch<Data = any, Error = any>(url: string) {
-  const { data, error, mutate } = useSWR<Data, Error>(url, fetcher);
+  const { data, error, mutate } = useSWR<Data, Error>(url, fetcher, {
+    errorRetryCount: 3,
+    errorRetryInterval: 5000,
+    revalidateOnReconnect: true,
+  });
 
   return { data, error, mutate };
 }
