@@ -1,6 +1,6 @@
-# D'bags
+# D'Bags
 
-A bag store.
+A bag store. Written in TypeScript and uses NextJS.
 
 <p align="center">
     <img src="https://img.shields.io/github/license/alessandrohenriqueramos/D-bags?color=000" alt="license"/>
@@ -9,13 +9,13 @@ A bag store.
 
 ## Access
 
-To access the application page just click [here](https://d-bags.vercel.app).
+Check the application page accessing [here](https://d-bags.vercel.app).
 
 ## Getting the code
 
-As prerequisites, it is necessary to install [Node.js](https://nodejs.org/en/download/) or [Yarn](https://classic.yarnpkg.com/en/docs/install) in the latest LTS version.
+As prerequisites, it is necessary to install [NodeJS](https://nodejs.org/en/download/) or [Yarn](https://classic.yarnpkg.com/en/docs/install) in its LTS version.
 
-With these applications installed, open the terminal in the application folder. Then, execute the following commands, in sequence:
+With these applications installed, open the terminal in the folder of your choice. Then, run the following commands, in sequence:
 
 ### Execute
 
@@ -27,7 +27,7 @@ cd D-bags
 ### Windows / Mac / Linux:
 
 ```
-npm
+npm install
 ```
 
 or
