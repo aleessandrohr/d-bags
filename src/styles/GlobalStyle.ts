@@ -12,7 +12,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${({ theme }) => theme.colors.default};
+    background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.primary};
     font-family: 'Roboto', sans-serif;
   }
@@ -22,15 +22,12 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 0.4rem;
-  }
-
-  ::-webkit-scrollbar-track {
+    width: 0.2rem;
     background-color: ${(props) => props.theme.colors["scroll-y"]};
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 2px;
+    border-radius: 2.5px;
     background: ${(props) => props.theme.colors.primary};
   }
 
@@ -39,11 +36,13 @@ export default createGlobalStyle`
       font-size: 14px;
     }
   }
+
   @media(max-width: 320px) {
     html {
       font-size: 12px;
     }
   }
+
   @media(max-width: 280px) {
     html {
       font-size: 10px;
