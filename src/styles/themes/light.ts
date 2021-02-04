@@ -13,7 +13,9 @@ export const light = {
     "scroll-y": "#fff",
     switch: "#8A84E2",
     "switch-color": "#c6c6c6",
-    image: "#f2f2f2",
+    image: "#f1f1f1",
     yellow: "#F1C40F",
+    loading: "#f1f1f1",
+    "loading-highlight": "#fafafa",
   },
 };

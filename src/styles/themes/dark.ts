@@ -15,5 +15,7 @@ export const dark = {
     "switch-color": "#c6c6c6",
     image: "#282828",
     yellow: "#F4D03F",
+    loading: "#282828",
+    "loading-highlight": "#303030",
   },
 };
