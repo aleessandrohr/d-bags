@@ -3,7 +3,6 @@ import { useFetch } from "../hooks/useFetch";
 import { Bag } from "../@types/Bag";
 import { ErrorFetch } from "../@types/ErrorFetch";
 
-import Loading from "../components/Loading/index";
 import NewBags from "../components/NewBags/index";
 import BagsByPrice from "../components/BagsByPrice/index";
 
@@ -26,16 +25,8 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Background />
-      {!data ? (
-        <div className="loading">
-          <Loading />
-        </div>
-      ) : (
-        <>
-          <NewBags newBags={data.newBags} />
-          <BagsByPrice bagsByPrice={data.bagsByPrice} />
-        </>
-      )}
+      <NewBags newBags={data?.newBags} />
+      <BagsByPrice bagsByPrice={data?.bagsByPrice} />
     </Container>
   );
 };
