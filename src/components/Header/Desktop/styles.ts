@@ -7,7 +7,7 @@ export const Container = styled.nav`
   right: 0;
   background-color: ${({ theme }) => theme.colors.nav};
   color: ${({ theme }) => theme.colors.primary};
-  box-shadow: 3px 3px 3px #00000030;
+  box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.shadow};
   padding: 0.5rem;
   z-index: 2;
 
@@ -22,21 +22,21 @@ export const Container = styled.nav`
       justify-content: center;
 
       > a {
+        font-size: 1.6rem;
         color: ${({ theme }) => theme.colors.primary};
         text-decoration: none;
-        font-size: 1.6em;
         display: flex;
         align-items: center;
         justify-content: center;
 
         > i {
-          padding: 0 0.4rem;
-          font-size: 1.4rem;
+          padding: 0 0.25rem;
+          font-size: 1.6rem;
         }
       }
 
       > .logo {
-        font-size: 2em;
+        font-size: 2rem;
         font-weight: 600;
       }
     }
