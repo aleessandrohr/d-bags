@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { imageUrl } from "../../helpers/imageUrl";
-import { formattedPrice } from "../../helpers/formattedPrice";
+import { imageUrl } from "../../helpers/imageUrl"; //temp
+import { formattedPrice } from "../../helpers/formattedPrice"; //temp
 import { Bag } from "../../@types/Bag";
 
 import { Container, Img, Description } from "./styles";
@@ -12,8 +12,8 @@ const BagByPrice: React.FC<Bag> = ({
   retail_price,
   reference,
 }) => {
-  const image = imageUrl(img_path);
-  const { newPrice } = formattedPrice(retail_price);
+  const image = imageUrl(img_path); //temp
+  const { newPrice } = formattedPrice(retail_price); //temp
 
   return (
     <Container>
@@ -29,11 +29,9 @@ const BagByPrice: React.FC<Bag> = ({
         <span className="price">R$ {newPrice}</span>
       </Img>
       <Description>
-        <div className="link">
-          <Link href={`/bag/${reference}`}>
-            <a>Confira</a>
-          </Link>
-        </div>
+        <Link href={`/bag/${reference}`}>
+          <a>Confira</a>
+        </Link>
       </Description>
     </Container>
   );
