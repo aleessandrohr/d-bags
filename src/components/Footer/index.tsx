@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction } from "react";
 import Switch from "react-switch";
 import { ThemeContext } from "styled-components";
 
-import { Container } from "./styles";
+import { Container, Items, Theme } from "./styles";
 
 interface Props {
   setTheme: Dispatch<SetStateAction<string>>;
@@ -17,11 +17,11 @@ const Footer: React.FC<Props> = ({ setTheme }) => {
 
   return (
     <Container>
-      <div className="footer">
+      <Items>
         <h1>D'bags</h1>
         <span>&#169; {year} D'bags. Todos os direitos reservados.</span>
-      </div>
-      <div className="theme">
+      </Items>
+      <Theme>
         <i className="far fa-moon"></i>
         <Switch
           onChange={() => setTheme(title === "light" ? "dark" : "light")}
@@ -30,14 +30,14 @@ const Footer: React.FC<Props> = ({ setTheme }) => {
           uncheckedIcon={false}
           height={10}
           width={40}
-          handleDiameter={18}
+          handleDiameter={20}
           offColor={colors.switch}
           offHandleColor={colors["switch-color"]}
           onHandleColor={colors["switch-color"]}
           onColor={colors.switch}
           className={"switch"}
         />
-      </div>
+      </Theme>
     </Container>
   );
 };
