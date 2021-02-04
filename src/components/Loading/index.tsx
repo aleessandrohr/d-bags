@@ -4,9 +4,6 @@ const Loading: React.FC = () => {
   return (
     <Container>
       <div />
-      <div />
-      <div />
-      <div />
     </Container>
   );
 };
