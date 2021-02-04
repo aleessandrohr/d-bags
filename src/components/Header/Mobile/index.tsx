@@ -2,14 +2,14 @@ import Link from "next/link";
 import { useState, memo } from "react";
 import { CSSTransition } from "react-transition-group";
 
-import { Container } from "./styles";
+import { Container, Menu, Items } from "./styles";
 
 const Mobile: React.FC = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
     <Container>
-      <div className="nav">
+      <Menu>
         <Link href="/" scroll={false}>
           <a>D'bags</a>
         </Link>
@@ -18,14 +18,14 @@ const Mobile: React.FC = () => {
             <i className="fas fa-bars" />
           </span>
         </button>
-      </div>
+      </Menu>
       <CSSTransition
         in={toggle}
         timeout={600}
         classNames="items-transitions"
         unmountOnExit
       >
-        <div className="items">
+        <Items>
           <ul>
             <li>
               <Link href="/">
@@ -48,7 +48,7 @@ const Mobile: React.FC = () => {
               </Link>
             </li>
           </ul>
-        </div>
+        </Items>
       </CSSTransition>
     </Container>
   );

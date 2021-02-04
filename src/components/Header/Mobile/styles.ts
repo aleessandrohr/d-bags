@@ -4,44 +4,16 @@ export const Container = styled.nav`
   display: none;
 
   @media (max-width: 768px) {
+    display: unset;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    display: unset;
     background-color: ${({ theme }) => theme.colors.nav};
     color: ${({ theme }) => theme.colors.primary};
-    box-shadow: 3px 3px 3px #00000030;
-    padding: 0.8rem;
+    box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.shadow};
+    padding: 0.6rem;
     z-index: 2;
-
-    > .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      > a {
-        color: ${({ theme }) => theme.colors.primary};
-        text-decoration: none;
-        font-size: 2em;
-        font-weight: 600;
-      }
-
-      > button {
-        padding: 0 0.8rem;
-        background-color: transparent;
-        border-width: 0;
-        outline: transparent;
-
-        > span {
-          > i {
-            color: ${({ theme }) => theme.colors.primary};
-            font-size: 1.8rem;
-            cursor: pointer;
-          }
-        }
-      }
-    }
 
     > .items-transitions-enter {
       max-height: 0;
@@ -60,23 +32,52 @@ export const Container = styled.nav`
       max-height: 0;
       transition: max-height 600ms;
     }
+  }
+`;
 
-    > .items {
-      overflow: hidden;
+export const Menu = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-      > ul {
-        display: flex;
-        flex-direction: column;
+  > a {
+    font-size: 2rem;
+    color: ${({ theme }) => theme.colors.primary};
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0 0.6rem;
+  }
 
-        > li {
-          padding: 0.8rem 0 0 0;
+  > button {
+    padding: 0 0.8rem;
+    background-color: transparent;
+    border-width: 0;
+    outline: transparent;
 
-          > a {
-            color: ${({ theme }) => theme.colors.primary};
-            text-decoration: none;
-            font-size: 1.25em;
-          }
-        }
+    > span {
+      > i {
+        color: ${({ theme }) => theme.colors.primary};
+        font-size: 2rem;
+        cursor: pointer;
+      }
+    }
+  }
+`;
+
+export const Items = styled.div`
+  overflow: hidden;
+
+  > ul {
+    display: flex;
+    flex-direction: column;
+
+    > li {
+      padding: 0.4rem 0.6rem;
+
+      > a {
+        font-size: 1.4rem;
+        color: ${({ theme }) => theme.colors.primary};
+        text-decoration: none;
       }
     }
   }
