@@ -7,20 +7,20 @@ export const Container = styled.div`
   height: 100vh;
 
   > h1 {
-    padding: 1rem;
-    font-size: 1.8rem;
+    padding: 1.2rem;
+    font-size: 2.2rem;
     font-weight: 400;
   }
 
   > span {
-    height: 40px;
+    height: 3rem;
     border: 1px solid ${({ theme }) => theme.colors.primary};
     opacity: 0.8;
   }
 
   > h2 {
-    padding: 1rem;
-    font-size: 1.6rem;
+    padding: 1.2rem;
+    font-size: 2rem;
     font-weight: 400;
   }
 `;
