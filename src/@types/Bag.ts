@@ -1,7 +1,6 @@
 export interface Bag {
 	id?: number;
 	name: string;
-	reference?: string;
 	retail_price?: number;
 	retail_price_discount?: number;
 	type?: string;
