@@ -51,14 +51,14 @@ export const Description = styled.div`
 		}
 	}
 
-	> .oldPrice {
+	> .discount {
 		padding: 0.2rem 1rem;
 		text-decoration: line-through;
 		font-size: 1.2rem;
 		font-weight: 300;
 	}
 
-	> .newPrice {
+	> .price {
 		padding: 0.2rem 1.2rem;
 		font-size: 1.6rem;
 		font-weight: 600;
