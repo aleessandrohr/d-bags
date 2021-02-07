@@ -25,10 +25,10 @@ const BagsByPrice: React.FC = () => {
 				<ul>
 					{data.bagsByPrice?.map((bag: Bag) => (
 						<BagByPrice
+							id={bag.id}
 							name={bag.name}
 							retail_price={bag.retail_price}
 							img_path={bag.img_path}
-							reference={bag.reference}
 							key={bag.img_path}
 						/>
 					))}
