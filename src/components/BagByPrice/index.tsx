@@ -7,12 +7,7 @@ import { Bag } from "../../@types/Bag";
 
 import { Container, Img, Description } from "./styles";
 
-const BagByPrice: React.FC<Bag> = ({
-	name,
-	img_path,
-	retail_price,
-	reference,
-}) => {
+const BagByPrice: React.FC<Bag> = ({ id, name, img_path, retail_price }) => {
 	const image = imageUrl(img_path); //temp
 
 	return (
@@ -29,7 +24,7 @@ const BagByPrice: React.FC<Bag> = ({
 				<span className="price">R$ {retail_price}</span>
 			</Img>
 			<Description>
-				<Link href={`/bag/${reference}`}>
+				<Link href={`/bag/${id}`}>
 					<a>Confira</a>
 				</Link>
 			</Description>
