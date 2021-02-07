@@ -23,6 +23,7 @@ const NewBags: React.FC = () => {
 				<ul>
 					{data.newBags?.map((bag: Bag, index) => (
 						<NewBag
+							id={bag.id}
 							name={bag.name}
 							retail_price={bag.retail_price}
 							retail_price_discount={bag.retail_price_discount}
@@ -32,7 +33,6 @@ const NewBags: React.FC = () => {
 							width={bag.width}
 							height={bag.height}
 							img_path={bag.img_path}
-							reference={bag.reference}
 							direction={index % 3 === 0 ? false : true}
 							key={bag.id}
 						/>
