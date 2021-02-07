@@ -12,6 +12,7 @@ interface Props extends Bag {
 }
 
 const NewBag: React.FC<Props> = ({
+	id,
 	name,
 	retail_price,
 	retail_price_discount,
@@ -20,7 +21,6 @@ const NewBag: React.FC<Props> = ({
 	width,
 	height,
 	img_path,
-	reference,
 	direction,
 }) => {
 	const image = imageUrl(img_path); //temp
@@ -49,7 +49,7 @@ const NewBag: React.FC<Props> = ({
 				</ul>
 				<span className="discount">R$ {retail_price}</span>
 				<span className="price">R$ {retail_price_discount}</span>
-				<Link href={`/bag/${reference}`}>
+				<Link href={`/bag/${id}`}>
 					<a>Confira</a>
 				</Link>
 			</Description>
