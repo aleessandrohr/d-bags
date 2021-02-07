@@ -36,7 +36,10 @@ const NewBag: React.FC<Props> = ({
 					className="image"
 				/>
 			</Img>
-			<Description className={direction ? "right" : "left"}>
+			<Description
+				className={direction ? "right" : "left"}
+				style={{ textAlign: direction ? "right" : "left" }}
+			>
 				<h1>{name}</h1>
 				<ul>
 					<li>
