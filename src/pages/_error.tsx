@@ -4,10 +4,10 @@ import { Container } from "../styles/pages/Error";
 
 interface Props {
 	status: number;
-	message: string;
+	statusText: string;
 }
 
-const Error: React.FC<Props> = ({ status, message }) => {
+const Error: React.FC<Props> = ({ status, statusText }) => {
 	return (
 		<Container>
 			<Head>
@@ -17,7 +17,7 @@ const Error: React.FC<Props> = ({ status, message }) => {
 			</Head>
 			<h1>{status}</h1>
 			<span />
-			<h2>{message}</h2>
+			<h2>{statusText}</h2>
 		</Container>
 	);
 };
