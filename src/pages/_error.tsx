@@ -12,7 +12,7 @@ const Error: React.FC<Props> = ({ status, statusText }) => {
 		<Container>
 			<Head>
 				<title>
-					Error {status} : {message}
+					Error {status} : {statusText}
 				</title>
 			</Head>
 			<h1>{status}</h1>
