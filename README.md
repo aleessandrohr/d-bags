@@ -19,32 +19,32 @@ With these applications installed, open the terminal in the folder of your choic
 
 ### Execute
 
-```
+```powershell
 git clone https://github.com/alessandrohenriqueramos/D-bags.git
 cd D-bags
 ```
 
 ### Windows / Mac / Linux:
 
-```
+```powershell
 npm install
 ```
 
 or
 
-```
+```powershell
 yarn
 ```
 
 ### Start the server:
 
-```
+```powershell
 npm dev
 ```
 
 or
 
-```
+```powershell
 yarn dev
 ```
 
