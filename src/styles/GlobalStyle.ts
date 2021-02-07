@@ -23,12 +23,12 @@ export default createGlobalStyle`
 
   ::-webkit-scrollbar {
     width: 0.2rem;
-    background-color: ${(props) => props.theme.colors["scroll-y"]};
+    background-color: ${({ theme }) => theme.colors["scroll-y"]};
   }
 
   ::-webkit-scrollbar-thumb {
     border-radius: 2.5px;
-    background: ${(props) => props.theme.colors.primary};
+    background: ${({ theme }) => theme.colors.primary};
   }
 
   @media(max-width: 768px) {
