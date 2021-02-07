@@ -6,12 +6,11 @@
 		"jest": true
 	},
 	"extends": [
+		"plugin:prettier/recommended",
 		"plugin:react/recommended",
-		"airbnb",
 		"plugin:@typescript-eslint/recommended",
-		"prettier/@typescript-eslint",
-		"prettier/airbnb",
-		"prettier/react"
+		"prettier/react",
+		"prettier/@typescript-eslint"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -19,12 +18,65 @@
 			"jsx": true
 		},
 		"ecmaVersion": 12,
+		"project": "tsconfig.json",
 		"sourceType": "module"
 	},
-	"plugins": ["react", "@typescript-eslint", "prettier"],
+	"plugins": [
+		"react",
+		"react-hooks",
+		"@typescript-eslint/eslint-plugin",
+		"import-helpers",
+		"prettier"
+	],
 	"rules": {
+		"react/display-name": 0,
+		"react/prop-types": "off",
+		"react/jsx-uses-react": 1,
+		"react/react-in-jsx-scope": "off",
+		"react-hooks/rules-of-hooks": "error", // Checks rules of hooks
+		"react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+		"class-methods-use-this": "off",
+		"max-classes-per-file": "off",
 		"prettier/prettier": "error",
+		"no-param-reassign": "error",
+		"no-new": "off",
+		"no-prototype-builtins": "off",
+		"no-restricted-syntax": "off",
+		"no-underscore-dangle": "off",
+		"no-case-declarations": 0,
+		"accessor-pairs": ["warn", { "setWithoutGet": false }],
 		"space-before-function-paren": "off",
-		"react/prop-types": "off"
+		"@typescript-eslint/camelcase": "off",
+		"@typescript-eslint/ban-ts-ignore": 0,
+		"@typescript-eslint/interface-name-prefix": "off",
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/no-unused-vars": 0,
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-use-before-define": [
+			"error",
+			{ "functions": false }
+		],
+		"import-helpers/order-imports": [
+			"warn",
+			{
+				"newlinesBetween": "always",
+				"groups": [
+					"module",
+					["parent", "sibling", "index"],
+					"/next/",
+					"/react/",
+					"/styled/",
+					"/components/",
+					"/helpers/",
+					"/hooks/",
+					"/utils/",
+					"/@types/",
+					"/styles/theme/",
+					"/styles/"
+				],
+				"alphabetize": { "order": "asc", "ignoreCase": true }
+			}
+		]
 	}
 }
