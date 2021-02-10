@@ -11,8 +11,8 @@ export const Container = styled.nav`
 		right: 0;
 		background-color: ${({ theme }) => theme.colors.nav};
 		color: ${({ theme }) => theme.colors.primary};
-		box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.shadow};
-		padding: 0.6rem;
+		box-shadow: 3px 3px 3px ${({ theme }) => theme.colors.shadow};
+		padding: 0.4rem;
 		z-index: 2;
 
 		> .items-transitions-enter {
@@ -41,23 +41,24 @@ export const Menu = styled.div`
 	justify-content: space-between;
 
 	> a {
-		font-size: 2rem;
+		font-family: "JetBrains Mono", monospace;
+		font-size: 1.8rem;
+		font-weight: 600;
 		color: ${({ theme }) => theme.colors.primary};
 		text-decoration: none;
-		font-weight: 600;
 		padding: 0 0.6rem;
 	}
 
 	> button {
-		padding: 0 0.8rem;
+		padding: 0.2rem 0.6rem;
 		background-color: transparent;
 		border-width: 0;
 		outline: transparent;
 
 		> span {
 			> i {
-				color: ${({ theme }) => theme.colors.primary};
 				font-size: 2rem;
+				color: ${({ theme }) => theme.colors.primary};
 				cursor: pointer;
 			}
 		}
@@ -78,6 +79,10 @@ export const Items = styled.div`
 				font-size: 1.4rem;
 				color: ${({ theme }) => theme.colors.primary};
 				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
