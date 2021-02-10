@@ -9,14 +9,16 @@ const Desktop: React.FC = () => {
 				<li>
 					<Link href="/">
 						<a>
-							<i className="fas fa-home" /> Home
+							<i className="fas fa-home" />
+							Home
 						</a>
 					</Link>
 				</li>
 				<li>
 					<Link href="/catalog">
 						<a>
-							<i className="fas fa-globe" /> Catálogo
+							<i className="fas fa-globe" />
+							Catálogo
 						</a>
 					</Link>
 				</li>
@@ -28,14 +30,16 @@ const Desktop: React.FC = () => {
 				<li>
 					<Link href="/feedback">
 						<a>
-							Feedback <i className="far fa-envelope" />
+							Feedback
+							<i className="far fa-envelope" />
 						</a>
 					</Link>
 				</li>
 				<li>
 					<Link href="/about">
 						<a>
-							Sobre <i className="far fa-user" />
+							Sobre
+							<i className="far fa-user" />
 						</a>
 					</Link>
 				</li>
