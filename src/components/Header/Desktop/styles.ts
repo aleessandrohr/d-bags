@@ -7,8 +7,8 @@ export const Container = styled.nav`
 	right: 0;
 	background-color: ${({ theme }) => theme.colors.nav};
 	color: ${({ theme }) => theme.colors.primary};
-	box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.shadow};
-	padding: 0.5rem;
+	box-shadow: 3px 3px 3px ${({ theme }) => theme.colors.shadow};
+	padding: 0.4rem;
 	z-index: 2;
 
 	> ul {
@@ -22,22 +22,29 @@ export const Container = styled.nav`
 			justify-content: center;
 
 			> a {
-				font-size: 1.6rem;
 				color: ${({ theme }) => theme.colors.primary};
 				text-decoration: none;
-				display: flex;
-				align-items: center;
-				justify-content: center;
+				font-size: 1.6rem;
+
+				&:hover {
+					text-decoration: underline;
+				}
 
 				> i {
-					padding: 0 0.25rem;
+					padding: 0 0.2rem;
 					font-size: 1.6rem;
 				}
 			}
 
 			> .logo {
-				font-size: 2rem;
+				font-family: "JetBrains Mono", monospace;
+				font-size: 1.8rem;
 				font-weight: 600;
+				border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
+
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}
