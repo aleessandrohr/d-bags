@@ -41,7 +41,7 @@ export default class MyDocument extends Document {
 					<meta charSet="utf-8" />
 					<meta
 						name="description"
-						content="As melhores bolsas você encontra na D'bags."
+						content="Compre na D'bags as melhores bolsas. Confira."
 					/>
 					<link
 						rel="stylesheet"
@@ -57,6 +57,11 @@ export default class MyDocument extends Document {
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link
 						href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+						rel="stylesheet"
+					/>
+					<link rel="preconnect" href="https://fonts.gstatic.com" />
+					<link
+						href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
 						rel="stylesheet"
 					/>
 				</Head>
