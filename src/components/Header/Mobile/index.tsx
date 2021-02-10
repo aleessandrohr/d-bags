@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { useState, memo } from "react";
+import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
 import { Container, Menu, Items } from "./styles";
@@ -55,4 +55,4 @@ const Mobile: React.FC = () => {
 	);
 };
 
-export default memo(Mobile);
+export default Mobile;
