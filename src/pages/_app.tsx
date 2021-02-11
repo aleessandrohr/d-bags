@@ -4,7 +4,7 @@ import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 
 import Footer from "@/components/Footer/index";
-import Header from "@/components/Header/index";
+import SideBar from "@/components/SideBar/index";
 
 import { usePersistedState } from "@/hooks/usePersistedState";
 
@@ -22,7 +22,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 			<Head>
 				<title>D&apos;bags</title>
 			</Head>
-			<Header />
+			<SideBar />
 			<Component {...pageProps} />
 			<Footer setTheme={setTheme} />
 			<GlobalStyle />
