@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Container } from "../styles/pages/Error";
+import { Container } from "@/styles/pages/Error";
 
 const Error: React.FC = () => {
 	return (
