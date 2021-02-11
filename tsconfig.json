@@ -5,6 +5,15 @@
 		"jsx": "preserve",
 		"lib": ["dom", "es2017"],
 		"moduleResolution": "node",
+		"baseUrl": "./src/",
+		"paths": {
+			"@/@types/*": ["@types/*"],
+			"@/components/*": ["components/*"],
+			"@/hooks/*": ["hooks/*"],
+			"@/utils/*": ["utils/*"],
+			"@/helpers/*": ["helpers/*"],
+			"@/styles/*": ["styles/*"]
+		},
 		"allowJs": true,
 		"noEmit": true,
 		"strict": true,
@@ -18,16 +27,7 @@
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"baseUrl": ".",
-		"paths": {
-			"@/@types/*": ["src/@types/*"],
-			"@/components/*": ["src/components/*"],
-			"@/hooks/*": ["src/hooks/*"],
-			"@/utils/*": ["src/utils/*"],
-			"@/helpers/*": ["src/helpers/*"],
-			"@/styles/*": ["src/styles/*"]
-		}
+		"isolatedModules": true
 	},
 	"exclude": ["node_modules"],
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
