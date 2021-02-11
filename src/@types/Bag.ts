@@ -1,6 +1,6 @@
 export interface Bag {
 	id?: number;
-	name: string;
+	name?: string;
 	retail_price?: number;
 	retail_price_discount?: number;
 	type?: string;
@@ -8,5 +8,5 @@ export interface Bag {
 	length?: number;
 	width?: number;
 	height?: number;
-	img_path: string;
+	img_path?: string;
 }
