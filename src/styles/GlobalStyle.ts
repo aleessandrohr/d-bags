@@ -22,11 +22,6 @@ export default createGlobalStyle`
     list-style: none;
   }
 
-  a {
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.primary};
-  }
-
   ::-webkit-scrollbar {
     width: 0.4rem;
     background-color: ${({ theme }) => theme.colors["scroll-y"]};
