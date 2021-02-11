@@ -1,7 +1,7 @@
-import BagsByPrice from "../components/BagsByPrice/index";
-import NewBags from "../components/NewBags/index";
+import BagsByPrice from "@/components/BagsByPrice/index";
+import NewBags from "@/components/NewBags/index";
 
-import { Container, Background } from "../styles/pages/Home";
+import { Container, Background } from "@/styles/pages/Home";
 
 const Home: React.FC = () => {
 	return (
