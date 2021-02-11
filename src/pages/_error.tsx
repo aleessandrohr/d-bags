@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Container } from "../styles/pages/Error";
+import { Container } from "@/styles/pages/Error";
 
 interface Props {
 	status: number;
@@ -11,9 +11,7 @@ const Error: React.FC<Props> = ({ status, statusText }) => {
 	return (
 		<Container>
 			<Head>
-				<title>
-					Error {status} : {statusText}
-				</title>
+				<title>Error {status}</title>
 			</Head>
 			<h1>{status}</h1>
 			<span />

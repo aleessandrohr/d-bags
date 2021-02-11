@@ -6,7 +6,7 @@ const Error: React.FC = () => {
 	return (
 		<Container>
 			<Head>
-				<title>Error 404 : Not Found.</title>
+				<title>Error 404</title>
 			</Head>
 			<h1>404</h1>
 			<span />
