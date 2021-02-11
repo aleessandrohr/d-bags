@@ -6,8 +6,8 @@
 		"jest": true
 	},
 	"extends": [
-		"plugin:prettier/recommended",
 		"plugin:react/recommended",
+		"plugin:prettier/recommended",
 		"plugin:@typescript-eslint/recommended",
 		"prettier/react",
 		"prettier/@typescript-eslint"
@@ -25,8 +25,8 @@
 		"react",
 		"react-hooks",
 		"@typescript-eslint/eslint-plugin",
-		"import-helpers",
-		"prettier"
+		"prettier",
+		"import-helpers"
 	],
 	"rules": {
 		"react/display-name": 0,
@@ -62,18 +62,18 @@
 			{
 				"newlinesBetween": "always",
 				"groups": [
-					"module",
-					["parent", "sibling", "index"],
 					"/next/",
 					"/react/",
 					"/styled/",
+					"module",
 					"/components/",
-					"/helpers/",
 					"/hooks/",
 					"/utils/",
+					"/helpers/",
 					"/@types/",
 					"/styles/theme/",
-					"/styles/"
+					"/styles/",
+					["parent", "sibling", "index"]
 				],
 				"alphabetize": { "order": "asc", "ignoreCase": true }
 			}
