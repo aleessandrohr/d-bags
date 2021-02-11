@@ -1,15 +1,17 @@
+<p align="center">
+    <img
+      src="https://img.shields.io/github/license/alessandrohenriqueramos/d-bags?style=for-the-badge&labelColor=000000"
+      alt="license"
+    />
+    <img
+      src="https://img.shields.io/github/package-json/v/alessandrohenriqueramos/d-bags?style=for-the-badge&labelColor=000000"
+      alt="version"
+    />
+</p>
+
 # D'Bags
 
 A bag store that was written in TypeScript and uses NextJS.
-
-<br />
-
-<p align="center">
-    <img src="https://img.shields.io/github/license/alessandrohenriqueramos/d-bags?style=for-the-badge&labelColor=000000" alt="license"/>
-    <img src="https://img.shields.io/github/package-json/v/alessandrohenriqueramos/d-bags?style=for-the-badge&labelColor=000000" alt="version">
-</p>
-
-<br />
 
 ## Access
 
@@ -23,32 +25,26 @@ With these applications installed, open the terminal in the folder of your choic
 
 ### Execute
 
-```powershell
+```zsh
 git clone https://github.com/alessandrohenriqueramos/d-bags.git
 cd d-bags
 ```
 
 ### Windows / Mac / Linux:
 
-```powershell
+```zsh
+#npm
 npm install
-```
-
-or
-
-```powershell
+#yarn
 yarn
 ```
 
 ### Start the server:
 
-```powershell
+```zsh
+#npm
 npm dev
-```
-
-or
-
-```powershell
+#yarn
 yarn dev
 ```
 
