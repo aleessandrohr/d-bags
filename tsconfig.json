@@ -10,7 +10,6 @@
 			"@/@types/*": ["@types/*"],
 			"@/components/*": ["components/*"],
 			"@/hooks/*": ["hooks/*"],
-			"@/utils/*": ["utils/*"],
 			"@/helpers/*": ["helpers/*"],
 			"@/styles/*": ["styles/*"]
 		},
