@@ -74,7 +74,6 @@
 					"module",
 					"/components/",
 					"/hooks/",
-					"/utils/",
 					"/helpers/",
 					"/@types/",
 					"/styles/theme/",

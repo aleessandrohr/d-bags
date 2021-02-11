@@ -29,6 +29,6 @@ export default createGlobalStyle`
 
   ::-webkit-scrollbar-thumb {
     background: ${({ theme }) => theme.colors.primary};
-    border-radius: 0.1rem;
+    border-radius: 0.2rem;
   }
 `;
