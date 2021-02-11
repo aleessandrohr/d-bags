@@ -1,11 +1,15 @@
 # D'Bags
 
-A bag store. Written in TypeScript and uses NextJS.
+A bag store that was written in TypeScript and uses NextJS.
+
+<br />
 
 <p align="center">
-    <img src="https://img.shields.io/github/license/alessandrohenriqueramos/D-bags?color=000" alt="license"/>
-    <img src="https://img.shields.io/github/package-json/v/alessandrohenriqueramos/D-bags?color=000" alt="version">
+    <img src="https://img.shields.io/github/license/alessandrohenriqueramos/d-bags?style=for-the-badge&labelColor=000000" alt="license"/>
+    <img src="https://img.shields.io/github/package-json/v/alessandrohenriqueramos/d-bags?style=for-the-badge&labelColor=000000" alt="version">
 </p>
+
+<br />
 
 ## Access
 
@@ -21,7 +25,7 @@ With these applications installed, open the terminal in the folder of your choic
 
 ```powershell
 git clone https://github.com/alessandrohenriqueramos/d-bags.git
-cd D-bags
+cd d-bags
 ```
 
 ### Windows / Mac / Linux:
