@@ -10,7 +10,7 @@ export const dark = {
 		"button-active": "#fff",
 		"button-disabled": "#ffffff30",
 		"button-hover": "#ffffff08",
-		"input-active": "#282828",
+		"input-active": "#333333",
 		"input-color": "#ffffffb1",
 		search: "#ffffffb9",
 		"scroll-y": "#333333",
