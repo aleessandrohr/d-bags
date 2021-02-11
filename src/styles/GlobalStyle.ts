@@ -8,44 +8,32 @@ export default createGlobalStyle`
   }
 
   html {
-    font-size: 16px;
+    font-size: 62.5%;
   }
 
   body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.primary};
-    font-family: 'Roboto', sans-serif;
   }
 
   ul {
     list-style: none;
   }
 
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
   ::-webkit-scrollbar {
-    width: 0.2rem;
+    width: 0.4rem;
     background-color: ${({ theme }) => theme.colors["scroll-y"]};
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 2.5px;
     background: ${({ theme }) => theme.colors.primary};
-  }
-
-  @media(max-width: 768px) {
-    html {
-      font-size: 14px;
-    }
-  }
-
-  @media(max-width: 320px) {
-    html {
-      font-size: 12px;
-    }
-  }
-
-  @media(max-width: 280px) {
-    html {
-      font-size: 10px;
-    }
+    border-radius: 0.1rem;
   }
 `;
