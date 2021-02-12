@@ -33,18 +33,16 @@ cd d-bags
 ### Windows / Mac / Linux:
 
 ```zsh
-#npm
 npm install
-#yarn
+#or
 yarn
 ```
 
 ### Start the server:
 
 ```zsh
-#npm
 npm dev
-#yarn
+#or
 yarn dev
 ```
 
