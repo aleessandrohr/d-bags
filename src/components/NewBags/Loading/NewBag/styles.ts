@@ -4,19 +4,13 @@ export const Container = styled.li`
 	display: flex;
 	padding: 1.5rem;
 
-	> .left {
-		align-items: flex-start;
-	}
-
 	> .right {
 		align-items: flex-end;
 	}
 
-	@media (max-width: 768px) {
-		display: unset;
-
-		> .left,
-		.right {
+	@media (max-width: 500px) {
+		> .right,
+		.left {
 			align-items: center;
 		}
 	}
@@ -32,36 +26,33 @@ export const Img = styled.div`
 export const Description = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 0 1rem;
+	padding: 0 1.5rem;
 
 	.item {
 		display: flex;
 		flex-direction: column;
-		margin: 1rem 0;
-	}
-
-	.discount {
-		display: flex;
-		flex-direction: column;
-		margin: 0.2rem 1rem;
+		margin: 1.5rem 0;
 	}
 
 	.price {
 		display: flex;
 		flex-direction: column;
-		margin: 0.2rem 1.2rem;
+		margin: 0.4rem 1rem;
+	}
+
+	.discount {
+		display: flex;
+		flex-direction: column;
+		margin: 0.2rem 2rem;
 	}
 
 	.link {
-		margin: 1.5rem 3rem;
+		margin: 1.4rem 2.8rem;
 	}
 
 	@media (max-width: 768px) {
-		align-items: center;
-		padding: 0.8rem 0;
-
 		.item {
-			margin: 0.8rem 0;
+			margin: 0.5rem 0;
 		}
 	}
 `;
