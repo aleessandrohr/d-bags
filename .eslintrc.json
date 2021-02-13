@@ -25,8 +25,8 @@
 		"react",
 		"react-hooks",
 		"@typescript-eslint/eslint-plugin",
-		"import-helpers",
-		"prettier"
+		"prettier",
+		"import-helpers"
 	],
 	"rules": {
 		"react/display-name": 0,
@@ -70,7 +70,7 @@
 				"groups": [
 					"/next/",
 					"/react/",
-					"/styled/",
+					"/styled-components/",
 					"module",
 					"/components/",
 					"/helpers/",
