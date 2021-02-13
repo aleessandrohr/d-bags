@@ -1,17 +1,18 @@
-import NewBag from "../NewBag/index";
-import Loading from "./Loading/index";
+import { NewBag } from "components/NewBag/index";
 
-import { useFetch } from "../../hooks/useFetch";
+import { useFetch } from "hooks/useFetch";
 
-import { Bag } from "../../@types/Bag";
+import { Bag } from "types/interfaces/Bag";
 
 import { Container, Error } from "./styles";
+
+import { Loading } from "./Loading/index";
 
 interface Data {
 	newBags?: Array<Bag>;
 }
 
-const NewBags: React.FC = () => {
+export const NewBags: React.FC = () => {
 	const { data, error } = useFetch<Data>(
 		"https://dbags.herokuapp.com/public/newbags",
 	);
@@ -27,12 +28,9 @@ const NewBags: React.FC = () => {
 							name={bag.name}
 							retail_price={bag.retail_price}
 							retail_price_discount={bag.retail_price_discount}
+							material_type={bag.material_type}
 							handle_type={bag.handle_type}
-							type={bag.type}
-							length={bag.length}
-							width={bag.width}
-							height={bag.height}
-							img_path={bag.img_path}
+							main_img_path={bag.main_img_path}
 							direction={index % 3 === 0 ? false : true}
 							key={bag.id}
 						/>
@@ -44,5 +42,3 @@ const NewBags: React.FC = () => {
 		</Container>
 	);
 };
-
-export default NewBags;
