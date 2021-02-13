@@ -1,6 +1,18 @@
 {
-  "cSpell.words": [
-    "D'bags",
-    "preconnect"
-  ]
+	"cSpell.words": [
+		"D'bags",
+		"unmount",
+		"preconnect",
+		"Roboto",
+		"monospace",
+		"Parens",
+		"builtins",
+		"paren",
+		"camelcase"
+	],
+	"material-icon-theme.folders.associations": {
+		"types": "typescript",
+		"interfaces": "typescript",
+		"enums": "typescript"
+	}
 }
