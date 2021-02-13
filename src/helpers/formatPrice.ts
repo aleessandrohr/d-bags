@@ -1,5 +1,8 @@
 export const formatPrice = (price: number) => {
-	const formattedPrice = price.toFixed(2).replace(".", ",");
+	const formattedPrice = price.toLocaleString("pt-BR", {
+		style: "currency",
+		currency: "BRL",
+	});
 
 	return formattedPrice;
 };
