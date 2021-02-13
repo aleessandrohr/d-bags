@@ -31,4 +31,10 @@ export default createGlobalStyle`
     background: ${({ theme }) => theme.colors.primary};
     border-radius: 0.2rem;
   }
+
+  @media (max-width: 900px) {
+    html {
+      font-size: 55%;
+    }
+  }
 `;
