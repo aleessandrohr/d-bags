@@ -1,5 +1,3 @@
-import NewBag from "./NewBag/index";
-
 import { useContext } from "react";
 import { SkeletonTheme } from "react-loading-skeleton";
 
@@ -7,7 +5,9 @@ import { ThemeContext } from "styled-components";
 
 import { Container } from "./styles";
 
-const Loading: React.FC = () => {
+import { NewBag } from "./NewBag/index";
+
+export const Loading: React.FC = () => {
 	const { colors } = useContext(ThemeContext);
 
 	return (
@@ -23,5 +23,3 @@ const Loading: React.FC = () => {
 		</SkeletonTheme>
 	);
 };
-
-export default Loading;
