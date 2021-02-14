@@ -3,11 +3,11 @@ import Link from "next/link";
 
 import { formatPrice } from "helpers/formatPrice";
 
-import { Bag } from "types/interfaces/Bag";
+import { INewBag } from "types/interfaces/INewBag";
 
-import { Container, Img, Description } from "./styles";
+import { Container, Img, Description, Price, Discount } from "./styles";
 
-interface Props extends Bag {
+interface Props extends INewBag {
 	direction: boolean;
 }
 
@@ -41,8 +41,8 @@ export const NewBag: React.FC<Props> = ({
 					<li>{material_type}</li>
 					<li>{handle_type}</li>
 				</ul>
-				<span className="price">{price}</span>
-				<span className="discount">{price_discount}</span>
+				<Price>{price}</Price>
+				<Discount>{price_discount}</Discount>
 				<Link href={`/bag/${id}`}>
 					<a>Confira</a>
 				</Link>

@@ -44,34 +44,21 @@ export const Description = styled.div`
 		}
 	}
 
-	> .price {
-		padding: 0.4rem 1rem;
-		text-decoration: line-through;
-		font-size: 2.2rem;
-		font-weight: 300;
-	}
-
-	> .discount {
-		padding: 0.2rem 2rem;
-		font-size: 2.4rem;
-		font-weight: 600;
-	}
-
 	> a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 11rem;
-		height: 2.8rem;
 		background-color: ${({ theme }) => theme.colors["button-active"]};
 		color: ${({ theme }) => theme.colors.secondary};
+		width: 11rem;
+		height: 2.8rem;
+		font-family: "Roboto Mono", monospace;
+		font-size: 2rem;
 		text-decoration: none;
 		border-width: 0;
 		border-radius: 7px;
 		outline: transparent;
 		margin: 1.4rem 2.8rem;
-		font-family: "Roboto Mono", monospace;
-		font-size: 2rem;
 		cursor: pointer;
 		transition: background-color 0.5s ease, color 0.4s ease;
 
@@ -86,9 +73,18 @@ export const Description = styled.div`
 		> ul {
 			padding: 0.5rem 0;
 		}
-
-		> .price {
-			font-size: 2rem;
-		}
 	}
+`;
+
+export const Price = styled.span`
+	font-size: 2rem;
+	font-weight: 300;
+	text-decoration: line-through;
+	padding: 0.4rem 1rem;
+`;
+
+export const Discount = styled.span`
+	font-size: 2.4rem;
+	font-weight: 600;
+	padding: 0.2rem 2rem;
 `;
