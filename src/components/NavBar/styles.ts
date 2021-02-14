@@ -16,6 +16,6 @@ export const Container = styled.header`
 
 	@media (max-width: 772px) {
 		display: unset;
-		padding: 0.6rem 1.2rem;
+		padding: 0.8rem 1.2rem;
 	}
 `;
