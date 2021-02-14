@@ -2,14 +2,14 @@ import { NewBag } from "components/NewBag/index";
 
 import { useFetch } from "hooks/useFetch";
 
-import { Bag } from "types/interfaces/Bag";
+import { INewBag } from "types/interfaces/INewBag";
 
 import { Container, Error } from "./styles";
 
 import { Loading } from "./Loading/";
 
 interface Data {
-	newBags?: Array<Bag>;
+	newBags?: Array<INewBag>;
 }
 
 export const NewBags: React.FC = () => {
@@ -22,7 +22,7 @@ export const NewBags: React.FC = () => {
 			<h1>NOVIDADES</h1>
 			{data && (
 				<ul>
-					{data.newBags?.map((bag: Bag, index) => (
+					{data.newBags?.map((bag: INewBag, index) => (
 						<NewBag
 							id={bag.id}
 							name={bag.name}

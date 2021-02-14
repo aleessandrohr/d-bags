@@ -50,7 +50,7 @@ export const Description = styled.div`
 		margin: 1.4rem 2.8rem;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 500px) {
 		.item {
 			margin: 0.5rem 0;
 		}
