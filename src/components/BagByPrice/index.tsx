@@ -1,35 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { imageUrl } from "../../helpers/imageUrl"; //temp
+import { formatPrice } from "helpers/formatPrice";
 
-import { Bag } from "../../@types/Bag";
+import { IBagByPrice } from "types/interfaces/IBagByPrice";
 
-import { Container, Img, Description } from "./styles";
+import { Container, Img, Discount, Description, Name, Price } from "./styles";
 
-const BagByPrice: React.FC<Bag> = ({ id, name, img_path, retail_price }) => {
-	const image = imageUrl(img_path); //temp
+export const BagByPrice: React.FC<IBagByPrice> = ({
+	id,
+	name,
+	retail_price,
+	discount,
+	main_img_path,
+}) => {
+	const price = formatPrice(retail_price);
 
 	return (
-		<Container>
-			<Img>
-				<Image
-					src={image}
-					alt={name}
-					width={180}
-					height={180}
-					className="image"
-				/>
-				<span className="discount">-10%</span>
-				<span className="price">R$ {retail_price}</span>
-			</Img>
-			<Description>
-				<Link href={`/bag/${id}`}>
-					<a>Confira</a>
-				</Link>
-			</Description>
-		</Container>
+		<Link href={`/bag/${id}`}>
+			<Container>
+				<Img>
+					<Image
+						src={main_img_path}
+						alt={name}
+						width={180}
+						height={180}
+						className="image"
+					/>
+					<Discount>-{discount}%</Discount>
+				</Img>
+				<Description>
+					<Name>{name}</Name>
+					<Price>{price}</Price>
+				</Description>
+			</Container>
+		</Link>
 	);
 };
-
-export default BagByPrice;
