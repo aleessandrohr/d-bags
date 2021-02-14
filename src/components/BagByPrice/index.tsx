@@ -5,7 +5,7 @@ import { formatPrice } from "helpers/formatPrice";
 
 import { IBagByPrice } from "types/interfaces/IBagByPrice";
 
-import { Container, Img, Discount, Description, Name, Price } from "./styles";
+import { Container, Img, Discount, Price } from "./styles";
 
 export const BagByPrice: React.FC<IBagByPrice> = ({
 	id,
@@ -17,23 +17,22 @@ export const BagByPrice: React.FC<IBagByPrice> = ({
 	const price = formatPrice(retail_price);
 
 	return (
-		<Link href={`/bag/${id}`}>
-			<Container>
-				<Img>
-					<Image
-						src={main_img_path}
-						alt={name}
-						width={180}
-						height={180}
-						className="image"
-					/>
-					<Discount>-{discount}%</Discount>
-				</Img>
-				<Description>
-					<Name>{name}</Name>
-					<Price>{price}</Price>
-				</Description>
-			</Container>
-		</Link>
+		<Container>
+			<Link href={`/bag/${id}`}>
+				<a>
+					<Img>
+						<Image
+							src={main_img_path}
+							alt={name}
+							width={200}
+							height={200}
+							className="image"
+						/>
+						<Discount>-{discount}%</Discount>
+					</Img>
+				</a>
+			</Link>
+			<Price>{price}</Price>
+		</Container>
 	);
 };
