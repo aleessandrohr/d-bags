@@ -29,7 +29,7 @@ export const Discount = styled.span`
 	color: ${({ theme }) => theme.colors.white};
 	font-size: 1.8rem;
 	border-radius: 1.4rem 0 0 1.4rem;
-	margin: 1rem 0;
+	margin: 1.5rem 0;
 	padding: 0.4rem 0.6rem;
 `;
 
