@@ -6,7 +6,7 @@ import { Bag } from "types/interfaces/Bag";
 
 import { Container, Error } from "./styles";
 
-import { Loading } from "./Loading/index";
+import { Loading } from "./Loading/";
 
 interface Data {
 	newBags?: Array<Bag>;
