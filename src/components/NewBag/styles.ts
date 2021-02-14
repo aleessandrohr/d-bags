@@ -4,23 +4,16 @@ export const Container = styled.li`
 	display: flex;
 	padding: 1.5rem;
 
-	> .left {
-		align-items: flex-start;
-	}
-
 	> .right {
 		align-items: flex-end;
+		text-align: right;
 	}
 
-	@media (max-width: 768px) {
-		display: unset;
-
+	@media (max-width: 500px) {
+		> .right,
 		> .left {
 			align-items: center;
-		}
-
-		> .right {
-			align-items: center;
+			text-align: center;
 		}
 	}
 `;
@@ -36,31 +29,31 @@ export const Img = styled.div`
 export const Description = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 0 1rem;
+	padding: 0 1.5rem;
 
 	> h1 {
-		font-size: 1.8rem;
+		font-size: 2.8rem;
 	}
 
 	> ul {
-		padding: 1rem 0;
+		padding: 1.5rem 0;
 
 		> li {
-			font-size: 1.2rem;
+			font-size: 1.8rem;
 			font-weight: 500;
 		}
 	}
 
-	> .discount {
-		padding: 0.2rem 1rem;
+	> .price {
+		padding: 0.4rem 1rem;
 		text-decoration: line-through;
-		font-size: 1.2rem;
+		font-size: 2.2rem;
 		font-weight: 300;
 	}
 
-	> .price {
-		padding: 0.2rem 1.2rem;
-		font-size: 1.6rem;
+	> .discount {
+		padding: 0.2rem 2rem;
+		font-size: 2.4rem;
 		font-weight: 600;
 	}
 
@@ -68,17 +61,17 @@ export const Description = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		text-decoration: none;
-		width: 7rem;
-		height: 1.8rem;
+		width: 11rem;
+		height: 2.8rem;
 		background-color: ${({ theme }) => theme.colors["button-active"]};
 		color: ${({ theme }) => theme.colors.secondary};
-		margin: 1.5rem 3rem;
+		text-decoration: none;
 		border-width: 0;
-		outline: transparent;
 		border-radius: 7px;
+		outline: transparent;
+		margin: 1.4rem 2.8rem;
 		font-family: "Roboto Mono", monospace;
-		font-size: 1.2rem;
+		font-size: 2rem;
 		cursor: pointer;
 		transition: background-color 0.5s ease, color 0.4s ease;
 
@@ -89,23 +82,13 @@ export const Description = styled.div`
 		}
 	}
 
-	@media (max-width: 768px) {
-		padding: 0.8rem 0;
-
+	@media (max-width: 500px) {
 		> ul {
-			padding: 0.8rem 0;
-			text-align: center;
-			> li {
-				font-size: 1.2rem;
-			}
-		}
-
-		> .discount {
-			font-size: 1.4rem;
+			padding: 0.5rem 0;
 		}
 
 		> .price {
-			font-size: 1.8rem;
+			font-size: 2rem;
 		}
 	}
 `;
