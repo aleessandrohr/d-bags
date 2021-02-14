@@ -17,6 +17,9 @@ export const light = {
 		switch: "#2f363e",
 		"switch-color": "#24292e",
 		image: "#f1f1f1",
+		discount: "#41cb72",
+		orange: "#fb8e31",
 		yellow: "#f1c40f",
+		white: "#fff",
 	},
 };
