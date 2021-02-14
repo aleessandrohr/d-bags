@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components";
 import { Footer } from "components/Footer";
 import { NavBar } from "components/NavBar";
 
-import { usePersistedState } from "hooks/usePersistedState";
+import { useThemeState } from "hooks/useThemeState";
 
 import { dark } from "styles/themes/dark";
 import { light } from "styles/themes/light";
@@ -14,7 +14,7 @@ import { light } from "styles/themes/light";
 import GlobalStyle from "styles/GlobalStyle";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
-	const [theme, setTheme] = usePersistedState("theme", "light");
+	const [theme, setTheme] = useThemeState("theme", "light");
 	const currentTheme = theme === "light" ? light : dark;
 
 	return (
