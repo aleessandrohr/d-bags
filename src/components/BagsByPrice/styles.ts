@@ -21,7 +21,7 @@ export const Container = styled.section`
 		align-items: center;
 		justify-content: center;
 		flex-wrap: wrap;
-		width: 60%;
+		width: 70%;
 	}
 `;
 
