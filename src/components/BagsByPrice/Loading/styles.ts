@@ -9,18 +9,11 @@ export const Container = styled.div`
 	margin: 1rem;
 
 	.image {
-		border-radius: 15px 15px 0 0;
+		border-radius: 15px;
 		cursor: pointer;
 	}
-`;
-
-export const Items = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
 
 	.price {
-		margin: 0.5rem 0;
+		margin: 0.4rem 0;
 	}
 `;

@@ -3,7 +3,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 import { ThemeContext } from "styled-components";
 
-import { Container, Items } from "./styles";
+import { Container } from "./styles";
 
 export const Loading: React.FC = () => {
 	const { colors } = useContext(ThemeContext);
@@ -14,11 +14,8 @@ export const Loading: React.FC = () => {
 			highlightColor={colors["loading-highlight"]}
 		>
 			<Container>
-				<Skeleton width={180} height={180} className="image" />
-				<Items>
-					<Skeleton width={"10rem"} height={"2.5rem"} className="name" />
-					<Skeleton width={"7rem"} height={"2.2rem"} className="price" />
-				</Items>
+				<Skeleton width={200} height={200} className="image" />
+				<Skeleton width={"7rem"} height={"2.5rem"} className="price" />
 			</Container>
 		</SkeletonTheme>
 	);
