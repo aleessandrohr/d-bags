@@ -1,17 +1,18 @@
-import BagByPrice from "../BagByPrice";
-import Loading from "./Loading/index";
+import { BagByPrice } from "components/BagByPrice";
 
-import { useFetch } from "../../hooks/useFetch";
+import { useFetch } from "hooks/useFetch";
 
-import { Bag } from "../../@types/Bag";
+import { IBagByPrice } from "types/interfaces/IBagByPrice";
 
 import { Container, Error } from "./styles";
 
+import { Loading } from "./Loading/";
+
 interface Data {
-	bagsByPrice?: Array<Bag>;
+	bagsByPrice?: Array<IBagByPrice>;
 }
 
-const BagsByPrice: React.FC = () => {
+export const BagsByPrice: React.FC = () => {
 	const { data, error } = useFetch<Data>(
 		"https://dbags.herokuapp.com/public/bagsbyprice",
 	);
@@ -23,13 +24,14 @@ const BagsByPrice: React.FC = () => {
 			</h1>
 			{data && (
 				<ul>
-					{data.bagsByPrice?.map((bag: Bag) => (
+					{data.bagsByPrice?.map((bag: IBagByPrice) => (
 						<BagByPrice
 							id={bag.id}
 							name={bag.name}
 							retail_price={bag.retail_price}
-							img_path={bag.img_path}
-							key={bag.img_path}
+							discount={bag.discount}
+							main_img_path={bag.main_img_path}
+							key={bag.id}
 						/>
 					))}
 				</ul>
@@ -39,5 +41,3 @@ const BagsByPrice: React.FC = () => {
 		</Container>
 	);
 };
-
-export default BagsByPrice;
