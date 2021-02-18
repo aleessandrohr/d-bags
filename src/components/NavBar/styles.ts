@@ -6,16 +6,15 @@ export const Container = styled.header`
 	left: 0;
 	right: 0;
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	background-color: ${({ theme }) => theme.colors.nav};
+	background-color: ${({ theme }) => theme.colors.header};
 	color: ${({ theme }) => theme.colors.primary};
-	box-shadow: 3px 3px 3px ${({ theme }) => theme.colors.shadow};
-	padding: 0.6rem 1rem;
+	box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.shadow};
+	padding: 0.4rem 0;
 	z-index: 2;
 
-	@media (max-width: 772px) {
+	@media (max-width: 768px) {
 		display: unset;
-		padding: 0.8rem 1.2rem;
+		padding: 0.4rem 1rem;
 	}
 `;

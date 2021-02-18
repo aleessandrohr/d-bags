@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 import { Container } from "./styles";
 
@@ -6,12 +6,9 @@ import { Desktop } from "./Desktop/index";
 import { Mobile } from "./Mobile/index";
 
 export const NavBar: React.FC = () => {
-	const [data, setData] = useState("");
+	const isMobile = useMediaQuery({
+		query: "(max-width: 768px)",
+	});
 
-	return (
-		<Container>
-			<Desktop data={data} setData={setData} />
-			<Mobile data={data} setData={setData} />
-		</Container>
-	);
+	return <Container>{isMobile ? <Mobile /> : <Desktop />}</Container>;
 };
