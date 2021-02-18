@@ -23,6 +23,15 @@ export const Container = styled.section`
 		flex-wrap: wrap;
 		width: 70%;
 	}
+
+	@media (max-width: 390px) {
+		> h1 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+	}
 `;
 
 export const Error = styled.span`
