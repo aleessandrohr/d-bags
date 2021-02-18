@@ -15,7 +15,7 @@ export const Loading: React.FC = () => {
 		>
 			<Container>
 				<Skeleton width={200} height={200} className="image" />
-				<Skeleton width={"7rem"} height={"2.5rem"} className="price" />
+				<Skeleton width={"10rem"} height={"2.5rem"} className="price" />
 			</Container>
 		</SkeletonTheme>
 	);
