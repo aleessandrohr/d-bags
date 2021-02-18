@@ -18,8 +18,7 @@ export const Container = styled.li`
 
 export const Img = styled.div`
 	.image {
-		border-radius: 7px;
-		cursor: pointer;
+		border-radius: 10px;
 	}
 `;
 
@@ -31,7 +30,7 @@ export const Description = styled.div`
 	.item {
 		display: flex;
 		flex-direction: column;
-		margin: 1.5rem 0;
+		margin: 1.2rem 0;
 	}
 
 	.price {
