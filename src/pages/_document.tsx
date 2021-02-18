@@ -43,6 +43,10 @@ export default class MyDocument extends Document {
 						name="description"
 						content="Venha e confira as melhores bolsas na D'bags."
 					/>
+					<meta
+						name="google-site-verification"
+						content="6VEG1pJ38MUONeTeHCpbOoHyTaG9tQsPRMJ-3CfIofw"
+					/>
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link
 						href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
