@@ -1,39 +1,49 @@
 import Link from "next/link";
 
-import { Props } from "../types";
+import { Container, Logo, Items, Item } from "./styles";
 
-import { Container, Flex, Logo, Items } from "./styles";
-
-import { Item } from "../Item";
-import { Search } from "../Search";
-
-export const Desktop: React.FC<Props> = ({ data, setData }) => {
+export const Desktop: React.FC = () => {
 	return (
 		<Container>
-			<Flex>
-				<Link href="/" scroll={false}>
-					<Logo>D&apos;BAGS</Logo>
-				</Link>
-				<Items>
-					<Item url="/">
-						<i className="fas fa-home" />
-						Home
-					</Item>
-					<Item url="/catalog">
-						<i className="fas fa-globe" />
-						Catálogo
-					</Item>
-					<Item url="/feedback">
-						Feedback
-						<i className="far fa-envelope" />
-					</Item>
-					<Item url="/about">
-						Sobre
-						<i className="far fa-user" />
-					</Item>
-				</Items>
-			</Flex>
-			<Search data={data} setData={setData} />
+			<Items>
+				<li>
+					<Link href="/">
+						<Item>
+							<i className="fas fa-home" />
+							<span>Home</span>
+						</Item>
+					</Link>
+				</li>
+				<li>
+					<Link href="/catalog">
+						<Item>
+							<i className="fas fa-globe" />
+							<span>Catálogo</span>
+						</Item>
+					</Link>
+				</li>
+				<li>
+					<Link href="/" scroll={false}>
+						<Logo>D&apos;BAGS</Logo>
+					</Link>
+				</li>
+				<li>
+					<Link href="/feedback">
+						<Item>
+							<span>Feedback</span>
+							<i className="far fa-envelope" />
+						</Item>
+					</Link>
+				</li>
+				<li>
+					<Link href="/about">
+						<Item>
+							<span>Sobre</span>
+							<i className="far fa-user" />
+						</Item>
+					</Link>
+				</li>
+			</Items>
 		</Container>
 	);
 };
