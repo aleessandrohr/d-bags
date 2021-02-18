@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.nav`
+	display: none;
+
 	> .items-transitions-enter {
 		max-height: 0;
 	}
@@ -17,6 +19,10 @@ export const Container = styled.nav`
 	> .items-transitions-exit-active {
 		max-height: 0;
 		transition: max-height 600ms;
+	}
+
+	@media (max-width: 768px) {
+		display: unset;
 	}
 `;
 

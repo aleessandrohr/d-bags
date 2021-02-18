@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Container = styled.nav`
 	width: 100%;
 	max-width: 800px;
+
+	@media (max-width: 768px) {
+		display: none;
+	}
 `;
 
 export const Logo = styled.a`
