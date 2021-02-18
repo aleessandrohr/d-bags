@@ -1,28 +1,22 @@
 import styled from "styled-components";
 
 export const Container = styled.nav`
-	display: none;
+	> .items-transitions-enter {
+		max-height: 0;
+	}
 
-	@media (max-width: 772px) {
-		display: unset;
+	> .items-transitions-enter-active {
+		max-height: 200px;
+		transition: max-height 800ms;
+	}
 
-		> .items-transitions-enter {
-			max-height: 0;
-		}
+	> .items-transitions-exit {
+		max-height: 200px;
+	}
 
-		> .items-transitions-enter-active {
-			max-height: 200px;
-			transition: max-height 800ms;
-		}
-
-		> .items-transitions-exit {
-			max-height: 200px;
-		}
-
-		> .items-transitions-exit-active {
-			max-height: 0;
-			transition: max-height 600ms;
-		}
+	> .items-transitions-exit-active {
+		max-height: 0;
+		transition: max-height 600ms;
 	}
 `;
 
@@ -34,7 +28,7 @@ export const Menu = styled.div`
 
 export const Logo = styled.a`
 	font-family: "Space Mono", sans-serif;
-	font-size: 2.5rem;
+	font-size: 2.8rem;
 	font-weight: 600;
 	cursor: pointer;
 `;
@@ -44,12 +38,10 @@ export const Bar = styled.button`
 	border-width: 0;
 	outline: transparent;
 
-	> span {
-		> i {
-			font-size: 2.6rem;
-			color: ${({ theme }) => theme.colors.primary};
-			cursor: pointer;
-		}
+	> i {
+		font-size: 2.8rem;
+		color: ${({ theme }) => theme.colors.primary};
+		cursor: pointer;
 	}
 `;
 
@@ -57,5 +49,21 @@ export const Items = styled.ul`
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	margin: 0.2rem 0;
+
+	> li {
+		padding: 0.25rem 0;
+	}
+`;
+
+export const Item = styled.a`
+	font-size: 2.2rem;
+	text-decoration: none;
+	color: ${({ theme }) => theme.colors.primary};
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+
+	&:hover,
+	&:focus {
+		opacity: 0.7;
+	}
 `;
