@@ -1,7 +1,10 @@
+import useSWR from "swr";
+
 import { NewBag } from "components/NewBag/index";
 
-import { useFetch } from "hooks/useFetch";
+import { fetcher } from "helpers/fetcher";
 
+import { ErrorFetch } from "types/interfaces/ErrorFetch";
 import { INewBag } from "types/interfaces/INewBag";
 
 import { Container, Error } from "./styles";
@@ -13,8 +16,9 @@ interface Data {
 }
 
 export const NewBags: React.FC = () => {
-	const { data, error } = useFetch<Data>(
+	const { data, error } = useSWR<Data, ErrorFetch>(
 		"https://dbags.herokuapp.com/public/newbags",
+		fetcher,
 	);
 
 	return (
@@ -42,3 +46,8 @@ export const NewBags: React.FC = () => {
 		</Container>
 	);
 };
+
+export async function getStaticProps() {
+	const data = await fetcher("https://dbags.herokuapp.com/public/newbags");
+	return { props: { data } };
+}

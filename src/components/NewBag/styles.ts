@@ -21,7 +21,7 @@ export const Container = styled.li`
 export const Img = styled.div`
 	.image {
 		background-color: ${({ theme }) => theme.colors.image};
-		border-radius: 7px;
+		border-radius: 10px;
 		cursor: pointer;
 	}
 `;
@@ -36,7 +36,7 @@ export const Description = styled.div`
 	}
 
 	> ul {
-		padding: 1.5rem 0;
+		padding: 1.2rem 0;
 
 		> li {
 			font-size: 1.8rem;
@@ -50,17 +50,17 @@ export const Description = styled.div`
 		justify-content: center;
 		background-color: ${({ theme }) => theme.colors["button-active"]};
 		color: ${({ theme }) => theme.colors.secondary};
-		width: 11rem;
-		height: 2.8rem;
+		width: 10.5rem;
+		height: 3rem;
 		font-family: "Roboto Mono", monospace;
-		font-size: 2rem;
+		font-size: 1.95rem;
 		text-decoration: none;
 		border-width: 0;
 		border-radius: 7px;
+		box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.shadow};
 		outline: transparent;
 		margin: 1.4rem 2.8rem;
-		cursor: pointer;
-		transition: background-color 0.5s ease, color 0.4s ease;
+		transition: background-color 0.2s ease, color 0.2s ease;
 
 		&:hover {
 			background-color: ${({ theme }) => theme.colors["button-hover"]};
@@ -77,7 +77,7 @@ export const Description = styled.div`
 `;
 
 export const Price = styled.span`
-	font-size: 2rem;
+	font-size: 1.8rem;
 	font-weight: 300;
 	text-decoration: line-through;
 	padding: 0.4rem 1rem;
