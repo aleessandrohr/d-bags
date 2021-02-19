@@ -33,6 +33,7 @@
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
-		"start": "next start"
+		"start": "next start",
+		"update": "yarn upgrade-interactive --latest"
 	}
 }
