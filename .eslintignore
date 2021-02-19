@@ -1,11 +1,11 @@
 # dependencies
-node_modules
+node_modules/
 
 # next.js
-.next
+.next/
 
 # production
-build
+build/
 
 # vercel
 .vercel
