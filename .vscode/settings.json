@@ -10,7 +10,8 @@
 		"monospace",
 		"paren",
 		"preconnect",
-		"unmount"
+		"unmount",
+		"webp"
 	],
 	"material-icon-theme.folders.associations": {
 		"types": "typescript",
