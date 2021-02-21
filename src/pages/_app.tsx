@@ -1,12 +1,9 @@
-import GoogleFonts from "next-google-fonts";
 import { AppProps } from "next/app";
-import Head from "next/head";
-
-import { Fragment } from "react";
 
 import { ThemeProvider } from "styled-components";
 
 import { Footer } from "components/Footer";
+import { Head } from "components/Head";
 import { NavBar } from "components/NavBar";
 
 import { usePersistedState } from "hooks/usePersistedState";
@@ -22,13 +19,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
 	return (
 		<ThemeProvider theme={currentTheme}>
-			<Fragment>
-				<GoogleFonts href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
-				<GoogleFonts href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" />
-				<Head>
-					<title>D&apos;bags</title>
-				</Head>
-			</Fragment>
+			<Head />
 			<NavBar />
 			<Component {...pageProps} />
 			<Footer setTheme={setTheme} />
