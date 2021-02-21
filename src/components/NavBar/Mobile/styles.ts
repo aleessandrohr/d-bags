@@ -44,7 +44,7 @@ export const Bar = styled.button`
 	border-width: 0;
 	outline: transparent;
 
-	> i {
+	> svg {
 		font-size: 2.8rem;
 		color: ${({ theme }) => theme.colors.primary};
 		cursor: pointer;
@@ -63,8 +63,8 @@ export const Items = styled.ul`
 
 export const Item = styled.a`
 	font-size: 2.2rem;
-	text-decoration: none;
 	color: ${({ theme }) => theme.colors.primary};
+	text-decoration: none;
 	cursor: pointer;
 	transition: opacity 0.2s ease;
 

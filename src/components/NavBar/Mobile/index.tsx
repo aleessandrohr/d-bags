@@ -1,7 +1,10 @@
 import Link from "next/link";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
+
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import { Container, Menu, Logo, Bar, Items, Item } from "./styles";
 
@@ -15,7 +18,7 @@ export const Mobile: React.FC = () => {
 					<Logo>D&apos;BAGS</Logo>
 				</Link>
 				<Bar onClick={() => setToggle(toggle ? false : true)}>
-					<i className="fas fa-bars" />
+					<FontAwesomeIcon icon={faBars} />
 				</Bar>
 			</Menu>
 			<CSSTransition
@@ -27,7 +30,7 @@ export const Mobile: React.FC = () => {
 				<Items>
 					<li>
 						<Link href="/">
-							<Item>Home </Item>
+							<Item>Home</Item>
 						</Link>
 					</li>
 					<li>
