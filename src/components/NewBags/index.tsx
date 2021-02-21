@@ -1,3 +1,5 @@
+import { GetStaticProps } from "next";
+
 import useSWR from "swr";
 
 import { NewBag } from "components/NewBag/index";
@@ -11,14 +13,19 @@ import { Container, Error } from "./styles";
 
 import { Loading } from "./Loading/";
 
+interface Props {
+	initialData?: any;
+}
+
 interface Data {
 	newBags?: Array<INewBag>;
 }
 
-export const NewBags: React.FC = () => {
+export const NewBags: React.FC<Props> = ({ initialData }) => {
 	const { data, error } = useSWR<Data, ErrorFetch>(
 		"https://dbags.herokuapp.com/public/newbags",
 		fetcher,
+		{ initialData },
 	);
 
 	return (
@@ -47,7 +54,7 @@ export const NewBags: React.FC = () => {
 	);
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
 	const data = await fetcher("https://dbags.herokuapp.com/public/newbags");
-	return { props: { data } };
-}
+	return { props: { initialData: data } };
+};
