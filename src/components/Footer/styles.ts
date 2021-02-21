@@ -24,7 +24,7 @@ export const Flex = styled.div`
 
 export const Items = styled.div`
 	> h1 {
-		font-family: "Space Mono", sans-serif;
+		font-family: "Roboto Mono", sans-serif;
 		font-size: 2.4rem;
 		font-weight: 600;
 	}
