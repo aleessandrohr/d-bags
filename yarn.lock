@@ -2175,6 +2175,11 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
+next-google-fonts@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/next-google-fonts/-/next-google-fonts-1.2.1.tgz#0b517cff3f34b8f7836f81eb9427973c8b4ac03e"
+  integrity sha512-BhVSldP1oZBTwXeJdMtjmu2qbDT1EkbQO2rG83Oj6APYm6aUsIcMu00Pzkzd8TTkrQW9HyC08Pzr10PY4pE6jA==
+
 next@^10.0.7:
   version "10.0.7"
   resolved "https://registry.yarnpkg.com/next/-/next-10.0.7.tgz#442f8e1da7454de33b0bbcc1ce5684b923597ee6"
