@@ -29,8 +29,8 @@ export const Item = styled.a`
 	align-items: center;
 	justify-content: center;
 	font-size: 2.5rem;
-	text-decoration: none;
 	color: ${({ theme }) => theme.colors.primary};
+	text-decoration: none;
 	cursor: pointer;
 	transition: opacity 0.2s ease;
 
@@ -39,8 +39,8 @@ export const Item = styled.a`
 		opacity: 0.7;
 	}
 
-	> i {
-		font-size: 2.2rem;
+	> svg {
+		font-size: 3rem;
 		padding: 0 0.5rem;
 	}
 `;

@@ -1,5 +1,14 @@
 import Link from "next/link";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+	faHome,
+	faGlobe,
+	faEnvelope,
+	faUser,
+} from "@fortawesome/free-solid-svg-icons";
+
 import { Container, Logo, Items, Item } from "./styles";
 
 export const Desktop: React.FC = () => {
@@ -9,16 +18,16 @@ export const Desktop: React.FC = () => {
 				<li>
 					<Link href="/">
 						<Item>
-							<i className="fas fa-home" />
-							<span>Home</span>
+							<FontAwesomeIcon icon={faHome} />
+							Home
 						</Item>
 					</Link>
 				</li>
 				<li>
 					<Link href="/catalog">
 						<Item>
-							<i className="fas fa-globe" />
-							<span>Catálogo</span>
+							<FontAwesomeIcon icon={faGlobe} />
+							Catálogo
 						</Item>
 					</Link>
 				</li>
@@ -30,16 +39,16 @@ export const Desktop: React.FC = () => {
 				<li>
 					<Link href="/feedback">
 						<Item>
-							<span>Feedback</span>
-							<i className="far fa-envelope" />
+							Feedback
+							<FontAwesomeIcon icon={faEnvelope} />
 						</Item>
 					</Link>
 				</li>
 				<li>
 					<Link href="/about">
 						<Item>
-							<span>Sobre</span>
-							<i className="far fa-user" />
+							Sobre
+							<FontAwesomeIcon icon={faUser} />
 						</Item>
 					</Link>
 				</li>
