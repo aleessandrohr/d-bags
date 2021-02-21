@@ -15,7 +15,7 @@ A bag store that was written in TypeScript and uses NextJS.
 
 ## Access
 
-Check the application page accessing [here](https://d-bags.vercel.app).
+Check the application page accessing [here](https://dbags.vercel.app).
 
 ## Getting the code
 
