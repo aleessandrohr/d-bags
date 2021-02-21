@@ -54,9 +54,10 @@ export const Theme = styled.div`
 	border: 2px solid ${({ theme }) => theme.colors.primary};
 	box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.shadow};
 	border-radius: 7px;
-	padding: 0.6rem 1rem;
+	padding: 0.2rem 1rem;
 
-	> i {
+	> svg {
+		font-size: 2.8rem;
 		padding: 0 0.6rem;
 	}
 

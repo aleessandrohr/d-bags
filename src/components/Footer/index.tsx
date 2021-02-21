@@ -1,7 +1,10 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, Dispatch, SetStateAction } from "react";
 import Switch from "react-switch";
 
 import { ThemeContext } from "styled-components";
+
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
 
 import { Container, Flex, Items, Theme } from "./styles";
 
@@ -23,7 +26,7 @@ export const Footer: React.FC<Props> = ({ setTheme }) => {
 					<p>&#169; {year} D&apos;bags. Todos os direitos reservados.</p>
 				</Items>
 				<Theme>
-					<i className="far fa-moon" />
+					<FontAwesomeIcon icon={faMoon} />
 					<Switch
 						onChange={() => setTheme(title === "light" ? "dark" : "light")}
 						checked={title === "dark"}
@@ -37,7 +40,6 @@ export const Footer: React.FC<Props> = ({ setTheme }) => {
 						onHandleColor={colors["switch-color"]}
 						onColor={colors.switch}
 						boxShadow={colors.shadow}
-						className={"switch"}
 					/>
 				</Theme>
 			</Flex>
