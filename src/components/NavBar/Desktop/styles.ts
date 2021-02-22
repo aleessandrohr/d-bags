@@ -10,7 +10,7 @@ export const Container = styled.nav`
 `;
 
 export const Logo = styled.a`
-	font-family: "Roboto Mono", sans-serif;
+	font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
 	font-size: 3rem;
 	font-weight: 600;
 	color: ${({ theme }) => theme.colors.primary};
