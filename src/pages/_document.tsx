@@ -41,7 +41,7 @@ export default class MyDocument extends Document {
 					<meta charSet="UTF-8" />
 					<meta
 						name="description"
-						content="Confira as melhores bolsas aqui na D'bags."
+						content="Confira as melhores bolsas na D'Bags."
 					/>
 					<meta
 						name="google-site-verification"
