@@ -28,6 +28,7 @@
 		"prettier",
 		"import-helpers"
 	],
+	"root": true,
 	"rules": {
 		"accessor-pairs": ["warn", { "setWithoutGet": false }],
 		"class-methods-use-this": "off",
