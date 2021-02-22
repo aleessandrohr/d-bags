@@ -12,7 +12,7 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.primary};
@@ -23,13 +23,13 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 0.4rem;
+    width: 4px;
     background-color: ${({ theme }) => theme.colors["scroll-y"]};
   }
 
   ::-webkit-scrollbar-thumb {
     background: ${({ theme }) => theme.colors.primary};
-    border-radius: 0.2rem;
+    border-radius: 1px;
   }
 
   @media (max-width: 768px) {
