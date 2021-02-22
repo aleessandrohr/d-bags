@@ -52,7 +52,7 @@ export const Description = styled.div`
 		color: ${({ theme }) => theme.colors.secondary};
 		width: 10.5rem;
 		height: 3rem;
-		font-family: "Roboto Mono", monospace;
+		font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
 		font-size: 1.95rem;
 		text-decoration: none;
 		border-width: 0;
