@@ -5,7 +5,6 @@ export const Container = styled.div`
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	border: 2px solid ${({ theme }) => theme.colors.background};
 	margin: 1rem;
 
 	.image {
