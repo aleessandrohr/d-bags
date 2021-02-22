@@ -24,25 +24,15 @@ export const Flex = styled.div`
 
 export const Items = styled.div`
 	> h1 {
-		font-family: "Roboto Mono", sans-serif;
-		font-size: 2.4rem;
+		font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+		font-size: 2.5rem;
 		font-weight: 600;
 	}
 
 	> p {
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 		font-weight: 200;
 		padding: 0.5rem 0;
-	}
-
-	@media (max-width: 600px) and (min-width: 320px) {
-		> h1 {
-			font-size: 2.6rem;
-		}
-
-		> p {
-			font-size: 1.6rem;
-		}
 	}
 `;
 

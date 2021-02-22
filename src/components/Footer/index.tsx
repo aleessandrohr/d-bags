@@ -23,7 +23,7 @@ export const Footer: React.FC<Props> = ({ setTheme }) => {
 			<Flex>
 				<Items>
 					<h1>D&apos;BAGS</h1>
-					<p>&#169; {year} D&apos;bags. Todos os direitos reservados.</p>
+					<p>&#169; {year} D&apos;Bags. Todos os direitos reservados.</p>
 				</Items>
 				<Theme>
 					<FontAwesomeIcon icon={faMoon} />
@@ -39,7 +39,6 @@ export const Footer: React.FC<Props> = ({ setTheme }) => {
 						offHandleColor={colors["switch-color"]}
 						onHandleColor={colors["switch-color"]}
 						onColor={colors.switch}
-						boxShadow={colors.shadow}
 					/>
 				</Theme>
 			</Flex>
