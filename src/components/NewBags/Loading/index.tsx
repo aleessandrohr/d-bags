@@ -3,8 +3,6 @@ import { SkeletonTheme } from "react-loading-skeleton";
 
 import { ThemeContext } from "styled-components";
 
-import { Container } from "./styles";
-
 import { NewBag } from "./NewBag/index";
 
 export const Loading: React.FC = () => {
@@ -15,11 +13,11 @@ export const Loading: React.FC = () => {
 			color={colors.loading}
 			highlightColor={colors["loading-highlight"]}
 		>
-			<Container>
+			<ul>
 				{[0, 1].map((item, index) => (
 					<NewBag key={item} direction={index % 3 === 0 ? false : true} />
 				))}
-			</Container>
+			</ul>
 		</SkeletonTheme>
 	);
 };
