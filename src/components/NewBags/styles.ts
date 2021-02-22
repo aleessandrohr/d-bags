@@ -7,7 +7,7 @@ export const Container = styled.section`
 	flex-direction: column;
 
 	> h1 {
-		font-family: "Roboto Mono", monospace;
+		font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
 		font-size: 4rem;
 		padding: 2rem;
 	}
