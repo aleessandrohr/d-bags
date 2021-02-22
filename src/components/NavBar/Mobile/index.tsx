@@ -17,7 +17,10 @@ export const Mobile: React.FC = () => {
 				<Link href="/" scroll={false}>
 					<Logo>D&apos;BAGS</Logo>
 				</Link>
-				<Bar onClick={() => setToggle(toggle ? false : true)}>
+				<Bar
+					onClick={() => setToggle(toggle ? false : true)}
+					aria-label="Justify"
+				>
 					<FontAwesomeIcon icon={faBars} />
 				</Bar>
 			</Menu>
