@@ -9,18 +9,18 @@ export const Container = styled.main`
 	max-height: 100vh;
 
 	> h1 {
-		font-size: 3rem;
+		font-size: 3.5rem;
 		font-weight: 400;
 	}
 
 	> span {
-		height: 5rem;
-		border: 1px solid ${({ theme }) => theme.colors.primary};
+		height: 6rem;
+		border-left: 1px solid ${({ theme }) => theme.colors.primary};
 		margin: 0 2rem;
 	}
 
 	> h2 {
 		font-size: 2.5rem;
-		font-weight: 400;
+		font-weight: 200;
 	}
 `;
