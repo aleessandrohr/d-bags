@@ -16,8 +16,6 @@ export const Img = styled.div`
 	position: relative;
 
 	.image {
-		width: 200;
-		height: 200;
 		background-color: ${({ theme }) => theme.colors.image};
 		color: ${({ theme }) => theme.colors.primary};
 		border-radius: 15px;

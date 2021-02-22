@@ -20,8 +20,6 @@ export const Container = styled.li`
 
 export const Img = styled.div`
 	.image {
-		width: 260;
-		height: 320;
 		background-color: ${({ theme }) => theme.colors.image};
 		border-radius: 10px;
 		cursor: pointer;
