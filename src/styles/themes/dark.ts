@@ -17,7 +17,7 @@ export const dark = {
 		switch: "#d9d9d9",
 		"switch-color": "#cdcdcd",
 		image: "#252525",
-		discount: "#41cb62",
+		discount: "#41cb52",
 		white: "#ffffff",
 		yellow: "#f4d03f",
 	},
