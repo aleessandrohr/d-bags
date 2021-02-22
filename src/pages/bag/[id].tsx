@@ -8,35 +8,15 @@ const Bag: React.FC = () => {
 
 export default Bag;
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-	const id = params?.id;
-
+export const getStaticProps: GetStaticProps = async () => {
 	return {
-		props: {
-			id: id,
-		},
+		notFound: true,
 	};
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
-		paths: [
-			{
-				params: {
-					id: "1",
-				},
-			},
-			{
-				params: {
-					id: "2",
-				},
-			},
-			{
-				params: {
-					id: "3",
-				},
-			},
-		],
+		paths: [],
 		fallback: "blocking",
 	};
 };
