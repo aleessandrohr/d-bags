@@ -10,11 +10,11 @@ export const Container = styled.header`
 	background-color: ${({ theme }) => theme.colors.header};
 	color: ${({ theme }) => theme.colors.primary};
 	box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.shadow};
-	padding: 0.4rem 0;
+	padding: 0.5rem 0;
 	z-index: 2;
 
 	@media (max-width: 768px) {
 		display: unset;
-		padding: 0.4rem 1rem;
+		padding: 0.5rem 1rem;
 	}
 `;
