@@ -16,6 +16,8 @@ export const Img = styled.div`
 	position: relative;
 
 	.image {
+		width: 200;
+		height: 200;
 		background-color: ${({ theme }) => theme.colors.image};
 		color: ${({ theme }) => theme.colors.primary};
 		border-radius: 15px;
@@ -28,6 +30,7 @@ export const Discount = styled.span`
 	background-color: ${({ theme }) => theme.colors.discount};
 	color: ${({ theme }) => theme.colors.white};
 	font-size: 1.8rem;
+	font-weight: 500;
 	border-radius: 1.4rem 0 0 1.4rem;
 	margin: 2rem 0;
 	padding: 0.4rem 0.6rem;
