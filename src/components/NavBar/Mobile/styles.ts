@@ -33,7 +33,7 @@ export const Menu = styled.div`
 `;
 
 export const Logo = styled.a`
-	font-family: "Roboto Mono", sans-serif;
+	font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
 	font-size: 2.8rem;
 	font-weight: 600;
 	cursor: pointer;
