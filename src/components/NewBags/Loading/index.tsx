@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { SkeletonTheme } from "react-loading-skeleton";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 import { ThemeContext } from "styled-components";
 
-import { NewBag } from "./NewBag/index";
+import { Container, Img, Description } from "./styles";
 
 export const Loading: React.FC = () => {
 	const { colors } = useContext(ThemeContext);
@@ -13,11 +13,17 @@ export const Loading: React.FC = () => {
 			color={colors.loading}
 			highlightColor={colors["loading-highlight"]}
 		>
-			<ul>
-				{[0, 1].map((item, index) => (
-					<NewBag key={item} direction={index % 3 === 0 ? false : true} />
-				))}
-			</ul>
+			<Container>
+				<Img>
+					<Skeleton className="image" width={260} height={320} />
+				</Img>
+				<Description>
+					<Skeleton width="13rem" height="3rem" className="name" />
+					<Skeleton width="8rem" height="2.5rem" className="price" />
+					<Skeleton width="10rem" height="2.5rem" className="discount" />
+					<Skeleton width="14rem" height="3.5rem" className="link" />
+				</Description>
+			</Container>
 		</SkeletonTheme>
 	);
 };
