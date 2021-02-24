@@ -1,5 +1,9 @@
 import Head from "next/head";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faFrown } from "@fortawesome/free-regular-svg-icons";
+
 import { Container } from "styles/pages/Error";
 
 interface Props {
@@ -11,14 +15,12 @@ const Error: React.FC<Props> = ({ status, statusText }) => {
 	return (
 		<>
 			<Head>
-				<title>
-					Error {status} : {statusText}
-				</title>
+				<title>{statusText} · D&apos;Bags</title>
 			</Head>
 			<Container>
+				<FontAwesomeIcon icon={faFrown} />
 				<h1>{status}</h1>
-				<span />
-				<h2>{statusText}</h2>
+				<p>{statusText}</p>
 			</Container>
 		</>
 	);
