@@ -8,7 +8,6 @@ export const Container = styled.main`
 	min-height: 100vh;
 	height: 100vh;
 	max-height: 100vh;
-	margin: -5rem 0 0 0;
 
 	> svg {
 		font-size: 12rem;
