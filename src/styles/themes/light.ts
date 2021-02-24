@@ -18,6 +18,6 @@ export const light = {
 		image: "#f2f2f2",
 		white: "#fff",
 		yellow: "#f5a900",
-		blue: "#0069F5",
+		blue: "#0070f3",
 	},
 };
