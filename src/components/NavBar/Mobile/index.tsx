@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import { Container, Menu, Logo, Bar, Items, Item } from "./styles";
 
@@ -21,7 +21,11 @@ export const Mobile: React.FC = () => {
 					onClick={() => setToggle(toggle ? false : true)}
 					aria-label="Justify"
 				>
-					<FontAwesomeIcon icon={faBars} />
+					{toggle ? (
+						<FontAwesomeIcon icon={faTimes} className="times" />
+					) : (
+						<FontAwesomeIcon icon={faBars} className="bars" />
+					)}
 				</Bar>
 			</Menu>
 			<CSSTransition
