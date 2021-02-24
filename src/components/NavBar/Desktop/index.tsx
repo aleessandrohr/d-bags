@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faUser } from "@fortawesome/free-regular-svg-icons";
 import { faHome, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
-import { Container, Logo, Items, Item } from "./styles";
+import { Container, Items, Item, Logo } from "./styles";
 
 export const Desktop: React.FC = () => {
 	return (
