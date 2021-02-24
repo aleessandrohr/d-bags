@@ -44,16 +44,17 @@ export const Bar = styled.button`
 	border-width: 0;
 	outline: transparent;
 
-	> .bars {
-		font-size: 3rem;
+	> svg {
 		color: ${({ theme }) => theme.colors.primary};
 		cursor: pointer;
 	}
 
+	> .bars {
+		font-size: 3rem;
+	}
+
 	> .times {
 		font-size: 3.8rem;
-		color: ${({ theme }) => theme.colors.primary};
-		cursor: pointer;
 	}
 `;
 
@@ -63,11 +64,13 @@ export const Items = styled.ul`
 	flex-direction: column;
 
 	> li {
-		margin: 0.25rem 0;
+		margin: 0.3rem 0;
 	}
 `;
 
 export const Item = styled.a`
+	display: flex;
+	align-items: center;
 	font-size: 2.4rem;
 	color: ${({ theme }) => theme.colors.primary};
 	text-decoration: none;
