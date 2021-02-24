@@ -23,7 +23,7 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 4px;
+    width: 5px;
     background-color: ${({ theme }) => theme.colors["scroll-y"]};
   }
 
