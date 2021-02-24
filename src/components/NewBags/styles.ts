@@ -12,18 +12,13 @@ export const Container = styled.section`
 		padding: 2rem;
 	}
 
-	.row-reverse {
-		flex-direction: row-reverse;
+	> ul {
+		display: flex;
 	}
 
-	@media (max-width: 500px) {
-		.row-reverse,
-		.row {
+	@media (max-width: 600px) {
+		> ul {
 			flex-direction: column;
 		}
 	}
-`;
-
-export const Error = styled.span`
-	font-size: 1.8rem;
 `;
