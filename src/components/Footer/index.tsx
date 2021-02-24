@@ -35,10 +35,10 @@ export const Footer: React.FC<Props> = ({ setTheme }) => {
 						height={10}
 						width={40}
 						handleDiameter={20}
-						offColor={colors.switch}
+						offColor={colors.blue}
 						offHandleColor={colors["switch-color"]}
 						onHandleColor={colors["switch-color"]}
-						onColor={colors.switch}
+						onColor={colors.blue}
 					/>
 				</Theme>
 			</Flex>
