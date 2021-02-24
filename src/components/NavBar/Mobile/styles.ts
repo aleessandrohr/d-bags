@@ -34,7 +34,7 @@ export const Menu = styled.div`
 
 export const Logo = styled.a`
 	font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
-	font-size: 2.8rem;
+	font-size: 3rem;
 	font-weight: 600;
 	cursor: pointer;
 `;
@@ -44,8 +44,14 @@ export const Bar = styled.button`
 	border-width: 0;
 	outline: transparent;
 
-	> svg {
-		font-size: 2.8rem;
+	> .bars {
+		font-size: 3rem;
+		color: ${({ theme }) => theme.colors.primary};
+		cursor: pointer;
+	}
+
+	> .times {
+		font-size: 3.8rem;
 		color: ${({ theme }) => theme.colors.primary};
 		cursor: pointer;
 	}
@@ -57,19 +63,18 @@ export const Items = styled.ul`
 	flex-direction: column;
 
 	> li {
-		padding: 0.25rem 0;
+		margin: 0.25rem 0;
 	}
 `;
 
 export const Item = styled.a`
-	font-size: 2.2rem;
+	font-size: 2.4rem;
 	color: ${({ theme }) => theme.colors.primary};
 	text-decoration: none;
 	cursor: pointer;
 	transition: opacity 0.2s ease;
 
-	&:hover,
-	&:focus {
-		opacity: 0.7;
+	&:hover {
+		opacity: 0.75;
 	}
 `;
