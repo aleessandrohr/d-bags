@@ -9,8 +9,9 @@ import { fetcher } from "helpers/fetcher";
 import { ErrorFetch } from "types/interfaces/ErrorFetch";
 import { INewBag } from "types/interfaces/INewBag";
 
-import { Container, Error } from "./styles";
+import { Container } from "./styles";
 
+import { Error } from "./Error";
 import { Loading } from "./Loading/";
 
 interface Props {
@@ -33,23 +34,20 @@ export const NewBags: React.FC<Props> = ({ initialData }) => {
 			<h1>NOVIDADES</h1>
 			{data && (
 				<ul>
-					{data.newBags?.map((bag: INewBag, index) => (
+					{data.newBags?.map((bag: INewBag) => (
 						<NewBag
 							id={bag.id}
 							name={bag.name}
 							retail_price={bag.retail_price}
 							retail_price_discount={bag.retail_price_discount}
-							material_type={bag.material_type}
-							handle_type={bag.handle_type}
 							main_img_path={bag.main_img_path}
-							direction={index % 3 === 0 ? false : true}
 							key={bag.id}
 						/>
 					))}
 				</ul>
 			)}
 			{!data && !error && <Loading />}
-			{error && <Error>Ocorreu um problema.</Error>}
+			{error && <Error />}
 		</Container>
 	);
 };
