@@ -64,13 +64,11 @@ export const Items = styled.ul`
 	flex-direction: column;
 
 	> li {
-		margin: 0.3rem 0;
+		padding: 0.3rem 0;
 	}
 `;
 
 export const Item = styled.a`
-	display: flex;
-	align-items: center;
 	font-size: 2.4rem;
 	color: ${({ theme }) => theme.colors.primary};
 	text-decoration: none;
