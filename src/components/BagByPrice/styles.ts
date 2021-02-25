@@ -6,36 +6,59 @@ export const Container = styled.li`
 	justify-content: center;
 	flex-direction: column;
 	margin: 1rem;
-
-	> a {
-		cursor: pointer;
-	}
 `;
 
 export const Img = styled.div`
-	position: relative;
-
-	.image {
-		background-color: ${({ theme }) => theme.colors.image};
+	> a {
 		color: ${({ theme }) => theme.colors.primary};
-		border-radius: 15px;
+		text-decoration: none;
+		cursor: pointer;
+
+		img {
+			background-color: ${({ theme }) => theme.colors.image};
+			border-radius: 10px;
+		}
 	}
 `;
 
-export const Discount = styled.span`
-	position: absolute;
-	right: 0;
-	background-color: ${({ theme }) => theme.colors.discount};
-	color: ${({ theme }) => theme.colors.white};
-	font-size: 1.8rem;
-	font-weight: 500;
-	border-radius: 1.4rem 0 0 1.4rem;
-	margin: 2rem 0;
-	padding: 0.4rem 0.6rem;
+export const Description = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	> h1 {
+		font-size: 2.6rem;
+	}
+
+	> a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: ${({ theme }) => theme.colors.blue};
+		color: ${({ theme }) => theme.colors.white};
+		font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+		font-size: 1.8rem;
+		text-decoration: none;
+		border-width: 0;
+		border-radius: 7px;
+		border: 2px solid transparent;
+		box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.shadow};
+		outline: transparent;
+		padding: 0.2rem 1.4rem;
+		margin: 0.8rem 0;
+		transition: background-color 0.2s ease, color 0.2s ease;
+
+		&:hover {
+			background-color: ${({ theme }) => theme.colors["button-hover"]};
+			color: ${({ theme }) => theme.colors.primary};
+			border: 2px solid ${({ theme }) => theme.colors.primary};
+		}
+	}
 `;
 
 export const Price = styled.span`
-	font-size: 2.4rem;
+	font-size: 2rem;
 	font-weight: 600;
 	padding: 0.4rem 0;
 `;
