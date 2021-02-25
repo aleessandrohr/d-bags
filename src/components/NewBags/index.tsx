@@ -54,5 +54,6 @@ export const NewBags: React.FC<Props> = ({ initialData }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
 	const data = await fetcher("https://dbags.herokuapp.com/public/newbags");
+
 	return { props: { initialData: data } };
 };
