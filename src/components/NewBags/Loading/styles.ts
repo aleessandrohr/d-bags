@@ -1,32 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.ul`
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: 1.5rem;
-`;
 
-export const Img = styled.div`
-	.image {
-		border-radius: 10px;
-	}
-`;
-
-export const Description = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	.price {
-		margin: 0.6rem 0;
-	}
-
-	.link {
-		border-radius: 7px;
-		padding: 0.2rem 1.6rem;
-		margin: 1rem 0;
+	@media (max-width: 600px) {
+		flex-direction: column;
 	}
 `;
