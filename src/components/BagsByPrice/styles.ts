@@ -21,7 +21,13 @@ export const Container = styled.section`
 		align-items: center;
 		justify-content: center;
 		flex-wrap: wrap;
-		width: 70%;
+		width: 60%;
+	}
+
+	@media (max-width: 768px) {
+		> ul {
+			width: 80%;
+		}
 	}
 
 	@media (max-width: 390px) {
@@ -32,8 +38,4 @@ export const Container = styled.section`
 			flex-direction: column;
 		}
 	}
-`;
-
-export const Error = styled.span`
-	font-size: 1.8rem;
 `;

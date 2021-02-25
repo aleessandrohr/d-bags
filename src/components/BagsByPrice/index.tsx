@@ -9,8 +9,9 @@ import { fetcher } from "helpers/fetcher";
 import { ErrorFetch } from "types/interfaces/ErrorFetch";
 import { IBagByPrice } from "types/interfaces/IBagByPrice";
 
-import { Container, Error } from "./styles";
+import { Container } from "./styles";
 
+import { Error } from "./Error";
 import { Loading } from "./Loading/";
 
 interface Props {
@@ -40,7 +41,6 @@ export const BagsByPrice: React.FC<Props> = ({ initialData }) => {
 							id={bag.id}
 							name={bag.name}
 							retail_price={bag.retail_price}
-							discount={bag.discount}
 							main_img_path={bag.main_img_path}
 							key={bag.id}
 						/>
@@ -48,7 +48,7 @@ export const BagsByPrice: React.FC<Props> = ({ initialData }) => {
 				</ul>
 			)}
 			{!data && !error && <Loading />}
-			{error && <Error>Ocorreu um problema.</Error>}
+			{error && <Error />}
 		</Container>
 	);
 };
