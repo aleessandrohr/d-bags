@@ -29,7 +29,7 @@ export default createGlobalStyle`
 
   ::-webkit-scrollbar-thumb {
     background: ${({ theme }) => theme.colors.primary};
-    border-radius: 1px;
+    border-radius: 1.5px;
   }
 
   @media (max-width: 768px) {
