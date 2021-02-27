@@ -1,7 +1,7 @@
 export const dark = {
 	title: "dark",
 	colors: {
-		primary: "#ffffffb1",
+		primary: "#ffffff",
 		secondary: "#000000",
 		background: "#262626",
 		header: "#303030",
