@@ -1,7 +1,7 @@
 export const light = {
 	title: "light",
 	colors: {
-		primary: "#000000",
+		primary: "#000",
 		secondary: "#fff",
 		background: "#fafafa",
 		header: "#fff",
@@ -13,12 +13,10 @@ export const light = {
 		"button-hover": "#00000005",
 		loading: "#f1f1f1",
 		"loading-highlight": "#fafafa",
-		switch: "#2f362e",
-		"switch-color": "#24282e",
 		image: "#f1f1f1",
 		white: "#fff",
 		black: "#000",
-		yellow: "#FFA100",
-		blue: "#0070f1",
+		yellow: "#ffa824",
+		blue: "#0070ff",
 	},
 };

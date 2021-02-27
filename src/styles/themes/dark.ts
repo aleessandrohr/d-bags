@@ -1,8 +1,8 @@
 export const dark = {
 	title: "dark",
 	colors: {
-		primary: "#ffffff",
-		secondary: "#000000",
+		primary: "#fff",
+		secondary: "#000",
 		background: "#262626",
 		header: "#303030",
 		footer: "#262626",
@@ -13,12 +13,10 @@ export const dark = {
 		"button-hover": "#ffffff08",
 		loading: "#323232",
 		"loading-highlight": "#262626",
-		switch: "#d8d8d8",
-		"switch-color": "#cdcdcd",
 		image: "#323232",
 		white: "#fff",
 		black: "#000",
-		yellow: "#f4d02f",
-		blue: "#0082F5",
+		yellow: "#ffd62d",
+		blue: "#075bc5",
 	},
 };
