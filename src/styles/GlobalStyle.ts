@@ -12,19 +12,15 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-size: 1.6rem;
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.primary};
-  }
-
-  ul {
-    list-style: none;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
   }
 
   ::-webkit-scrollbar {
-    width: 5px;
     background-color: ${({ theme }) => theme.colors["scroll-y"]};
+    width: 5px;
   }
 
   ::-webkit-scrollbar-thumb {
