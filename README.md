@@ -9,7 +9,7 @@
     />
 </p>
 
-# D'BAGS
+# D'Bags
 
 A bag store that was written in TypeScript and uses NextJS.
 
