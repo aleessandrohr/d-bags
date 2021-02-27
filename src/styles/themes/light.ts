@@ -16,7 +16,7 @@ export const light = {
 		image: "#f1f1f1",
 		white: "#fff",
 		black: "#000",
-		yellow: "#ffa824",
+		yellow: "#fb9b0b",
 		blue: "#0070ff",
 	},
 };
