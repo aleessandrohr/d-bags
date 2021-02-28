@@ -6,7 +6,7 @@ export const dark = {
 		background: "#262626",
 		header: "#303030",
 		footer: "#262626",
-		shadow: "#00000030",
+		shadow: "#00000050",
 		"scroll-y": "#303030",
 		"button-active": "#fff",
 		"button-disabled": "#ffffff30",
@@ -16,7 +16,7 @@ export const dark = {
 		image: "#323232",
 		white: "#fff",
 		black: "#000",
-		yellow: "#ffd62d",
-		blue: "#075bc5",
+		yellow: "#ffd525",
+		blue: "#1865dd",
 	},
 };
