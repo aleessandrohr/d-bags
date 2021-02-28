@@ -1,4 +1,8 @@
 <p align="center">
+	<h1 align="center">D'Bags</h1>
+</p>
+
+<p align="center">
     <img
       src="https://img.shields.io/github/license/alessandrohenriqueramos/d-bags?style=for-the-badge&labelColor=000000"
       alt="license"
@@ -8,10 +12,6 @@
       alt="version"
     />
 </p>
-
-# D'Bags
-
-A bag store that was written in TypeScript and uses NextJS.
 
 ## Access
 
