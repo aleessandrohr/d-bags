@@ -28,7 +28,7 @@ export const Footer: React.FC<Props> = ({ setTheme }) => {
 				<Theme>
 					<Moon
 						onClick={() => setTheme(title === "light" ? "dark" : "light")}
-						aria-labe="Alterar tema"
+						aria-label="Alterar tema"
 					>
 						<FontAwesomeIcon icon={faMoon} />
 					</Moon>
