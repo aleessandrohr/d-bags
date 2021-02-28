@@ -4,26 +4,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faFrown } from "@fortawesome/free-regular-svg-icons";
 
+import { ErrorFetch } from "types/interfaces/ErrorFetch";
+
 import { Container } from "styles/pages/Error";
 
-interface Props {
-	status: number;
-	statusText: string;
-}
-
-const Error: React.FC<Props> = ({ status, statusText }) => {
-	return (
-		<>
-			<Head>
-				<title>{statusText} · D&apos;Bags</title>
-			</Head>
-			<Container>
-				<FontAwesomeIcon icon={faFrown} />
-				<h1>{status}</h1>
-				<p>{statusText}</p>
-			</Container>
-		</>
-	);
-};
+const Error: React.FC<ErrorFetch> = ({ status, statusText }) => (
+	<>
+		<Head>
+			<title>{statusText} · D&apos;Bags</title>
+		</Head>
+		<Container>
+			<FontAwesomeIcon icon={faFrown} />
+			<h1>{status}</h1>
+			<p>{statusText}</p>
+		</Container>
+	</>
+);
 
 export default Error;

@@ -10,19 +10,18 @@ export const Container = styled.main`
 	max-height: 100vh;
 
 	> svg {
-		font-size: 12rem;
 		color: ${({ theme }) => theme.colors.blue};
-		margin: 0 0 2rem 0;
+		font-size: 10rem;
 	}
 
 	> h1 {
 		font-size: 5rem;
 		font-weight: 400;
-		margin: 0 0 1rem 0;
+		padding: 2rem 0;
 	}
 
 	> p {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		font-weight: 200;
 	}
 `;
