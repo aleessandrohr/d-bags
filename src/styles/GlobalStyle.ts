@@ -19,8 +19,8 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    background-color: ${({ theme }) => theme.colors["scroll-y"]};
     width: 5px;
+    background-color: ${({ theme }) => theme.colors["scroll-y"]};
   }
 
   ::-webkit-scrollbar-thumb {
