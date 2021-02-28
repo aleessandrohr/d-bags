@@ -13,6 +13,8 @@ export const dark = {
 		"button-hover": "#ffffff08",
 		loading: "#323232",
 		"loading-highlight": "#262626",
+		switch: "#718494",
+		"switch-color": "#90caf9",
 		image: "#323232",
 		white: "#fff",
 		black: "#000",

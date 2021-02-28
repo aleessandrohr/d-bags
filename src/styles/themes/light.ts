@@ -13,6 +13,8 @@ export const light = {
 		"button-hover": "#00000005",
 		loading: "#eeeeee",
 		"loading-highlight": "#fafafa",
+		switch: "#808080",
+		"switch-color": "#585858",
 		image: "#eeeeee",
 		white: "#fff",
 		black: "#000",
