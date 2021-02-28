@@ -1,11 +1,10 @@
-import Font from "next-google-fonts";
 import { AppProps } from "next/app";
-import Head from "next/head";
 
 import { ThemeProvider } from "styled-components";
 
 import { Footer } from "components/Footer";
-import { NavBar } from "components/NavBar";
+import { Head } from "components/Head";
+import { Header } from "components/Header";
 
 import { usePersistedState } from "hooks/usePersistedState";
 
@@ -20,12 +19,8 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
 	return (
 		<ThemeProvider theme={currentTheme}>
-			<Font href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
-			<Font href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" />
-			<Head>
-				<title>D&apos;Bags</title>
-			</Head>
-			<NavBar />
+			<Head />
+			<Header />
 			<Component {...pageProps} />
 			<Footer setTheme={setTheme} />
 			<GlobalStyle />
