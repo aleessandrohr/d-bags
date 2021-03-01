@@ -2,8 +2,18 @@ import styled from "styled-components";
 
 export const Container = styled.ul`
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
-	@media (max-width: 600px) {
-		flex-direction: column;
+	> .row-reverse {
+		flex-direction: row-reverse;
+	}
+
+	@media (max-width: 500px) {
+		> .row,
+		.row-reverse {
+			flex-direction: column;
+		}
 	}
 `;

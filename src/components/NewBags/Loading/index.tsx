@@ -16,8 +16,8 @@ export const Loading: React.FC = () => {
 			highlightColor={colors["loading-highlight"]}
 		>
 			<Container>
-				{[0, 1].map(skeleton => (
-					<NewBag key={skeleton} />
+				{[0, 1].map((skeleton, index) => (
+					<NewBag direction={index % 3 === 0 ? true : false} key={skeleton} />
 				))}
 			</Container>
 		</SkeletonTheme>
