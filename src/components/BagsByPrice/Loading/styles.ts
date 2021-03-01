@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
-	margin: 1rem;
+	padding: 1.5rem;
 `;
 
 export const Img = styled.div`
 	.image {
-		border-radius: 10px;
+		border-radius: 7px;
 	}
 `;
 
@@ -26,7 +26,6 @@ export const Description = styled.div`
 
 	.link {
 		border-radius: 7px;
-		padding: 0.2rem 1.4rem;
 		margin: 0.8rem 0;
 	}
 `;

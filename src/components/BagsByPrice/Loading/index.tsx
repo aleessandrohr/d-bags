@@ -15,12 +15,12 @@ export const Loading: React.FC = () => {
 		>
 			<Container>
 				<Img>
-					<Skeleton width={220} height={260} className="image" />
+					<Skeleton width={200} height={250} className="image" />
 				</Img>
 				<Description>
 					<Skeleton width={"13rem"} height={"3rem"} className="name" />
 					<Skeleton width={"8.5rem"} height={"2.5rem"} className="price" />
-					<Skeleton width={"12rem"} height={"3.5rem"} className="link" />
+					<Skeleton width={"11rem"} height={"3rem"} className="link" />
 				</Description>
 			</Container>
 		</SkeletonTheme>
