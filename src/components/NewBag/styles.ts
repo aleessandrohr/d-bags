@@ -2,10 +2,18 @@ import styled from "styled-components";
 
 export const Container = styled.li`
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	padding: 1.5rem;
+
+	> .row-reverse {
+		align-items: flex-end;
+	}
+
+	@media (max-width: 500px) {
+		> .row,
+		.row-reverse {
+			align-items: center;
+		}
+	}
 `;
 
 export const Img = styled.div`
@@ -15,7 +23,7 @@ export const Img = styled.div`
 
 		img {
 			background-color: ${({ theme }) => theme.colors.image};
-			border-radius: 10px;
+			border-radius: 7px;
 			cursor: pointer;
 		}
 	}
@@ -24,12 +32,7 @@ export const Img = styled.div`
 export const Description = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	> h1 {
-		font-size: 2.8rem;
-	}
+	padding: 0.5rem 1.5rem;
 
 	> a {
 		display: flex;
@@ -45,8 +48,8 @@ export const Description = styled.div`
 		border: 2px solid transparent;
 		box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.shadow};
 		outline: transparent;
-		padding: 0.2rem 1.6rem;
-		margin: 1rem 0;
+		padding: 0.25rem 1.5rem;
+		margin: 1rem 2.8rem;
 		transition: background-color 0.2s ease, color 0.2s ease;
 
 		&:hover {
@@ -57,14 +60,19 @@ export const Description = styled.div`
 	}
 `;
 
+export const Title = styled.h1`
+	font-size: 2.8rem;
+`;
+
 export const Price = styled.span`
 	font-size: 1.8rem;
-	font-weight: 300;
+	font-weight: 200;
 	text-decoration: line-through;
-	padding: 0.6rem 0;
+	padding: 0.4rem 0.8rem;
 `;
 
 export const Discount = styled.span`
 	font-size: 2.4rem;
 	font-weight: 600;
+	padding: 0 1.8rem;
 `;
