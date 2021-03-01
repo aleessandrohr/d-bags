@@ -22,12 +22,12 @@ interface Data {
 	bagsByPrice?: Array<IBagByPrice>;
 }
 
+const url = "https://dbags.herokuapp.com/public/bagsbyprice";
+
 export const BagsByPrice: React.FC<Props> = ({ initialData }) => {
-	const { data, error } = useSWR<Data, ErrorFetch>(
-		"https://dbags.herokuapp.com/public/bagsbyprice",
-		fetcher,
-		{ initialData },
-	);
+	const { data, error } = useSWR<Data, ErrorFetch>(url, fetcher, {
+		initialData,
+	});
 
 	return (
 		<Container>
@@ -54,7 +54,7 @@ export const BagsByPrice: React.FC<Props> = ({ initialData }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	const data = await fetcher("https://dbags.herokuapp.com/public/bagsbyprice");
+	const data = await fetcher(url);
 
 	return { props: { initialData: data } };
 };

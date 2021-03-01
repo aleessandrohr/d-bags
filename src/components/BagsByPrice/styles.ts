@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.section`
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
 
 	> h1 {
 		font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
 		font-size: 4rem;
+		text-align: center;
 		padding: 2rem;
 
 		> span {
@@ -18,24 +19,15 @@ export const Container = styled.section`
 
 	> ul {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-		flex-wrap: wrap;
 		width: 60%;
 	}
 
 	@media (max-width: 768px) {
 		> ul {
 			width: 80%;
-		}
-	}
-
-	@media (max-width: 390px) {
-		> h1 {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
 		}
 	}
 `;
