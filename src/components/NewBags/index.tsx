@@ -22,25 +22,26 @@ interface Data {
 	newBags?: Array<INewBag>;
 }
 
+const url = "https://dbags.herokuapp.com/public/newbags";
+
 export const NewBags: React.FC<Props> = ({ initialData }) => {
-	const { data, error } = useSWR<Data, ErrorFetch>(
-		"https://dbags.herokuapp.com/public/newbags",
-		fetcher,
-		{ initialData },
-	);
+	const { data, error } = useSWR<Data, ErrorFetch>(url, fetcher, {
+		initialData,
+	});
 
 	return (
 		<Container>
 			<h1>NOVIDADES</h1>
 			{data && (
 				<ul>
-					{data.newBags?.map((bag: INewBag) => (
+					{data.newBags?.map((bag: INewBag, index) => (
 						<NewBag
 							id={bag.id}
 							name={bag.name}
 							retail_price={bag.retail_price}
 							retail_price_discount={bag.retail_price_discount}
 							main_img_path={bag.main_img_path}
+							direction={index % 3 === 0 ? true : false}
 							key={bag.id}
 						/>
 					))}
@@ -53,7 +54,7 @@ export const NewBags: React.FC<Props> = ({ initialData }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	const data = await fetcher("https://dbags.herokuapp.com/public/newbags");
+	const data = await fetcher(url);
 
 	return { props: { initialData: data } };
 };
