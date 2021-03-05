@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-	width: 60vw;
-	max-width: 28rem;
+	width: 75vw;
+	max-width: 30rem;
+	height: 100%;
 	background: ${({ theme }) => theme.colors.header};
 	color: ${({ theme }) => theme.colors.primary};
-	height: 100%;
-	overflow-y: auto;
 	padding: 2rem;
 `;
 
@@ -17,8 +16,8 @@ export const Menu = styled.div`
 `;
 
 export const Logo = styled.a`
-	font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
-	font-size: 3rem;
+	font-family: "Roboto Mono", Segoe UI Emoji, Arial, Helvetica, sans-serif;
+	font-size: 3.2rem;
 	font-weight: 600;
 	cursor: pointer;
 `;
@@ -27,33 +26,44 @@ export const Close = styled.button`
 	background-color: transparent;
 	border-width: 0;
 	outline: transparent;
+	padding: 0.8rem;
+	cursor: pointer;
+	transition: opacity 0.2 ease;
+
+	&:hover {
+		opacity: 0.75;
+	}
 
 	> svg {
 		color: ${({ theme }) => theme.colors.primary};
 		font-size: 3.8rem;
-		cursor: pointer;
 	}
 `;
 
 export const Items = styled.ul`
-	padding: 2.5rem 0;
 	list-style: none;
+	padding: 2rem 0;
 `;
 
 export const Item = styled.li`
-	padding: 0.5rem 0;
+	padding: 0.4rem 0;
 
 	> a {
-		display: block;
+		display: flex;
+		align-items: center;
 		color: ${({ theme }) => theme.colors.primary};
-		font-size: 2.4rem;
+		font-size: 2.6rem;
 		text-decoration: none;
-		padding: 0.3rem 0;
+		padding: 0.4rem 0;
 		cursor: pointer;
 		transition: opacity 0.2s ease;
 
 		&:hover {
-			opacity: 0.8;
+			opacity: 0.75;
+		}
+
+		> svg {
+			margin-right: 1rem;
 		}
 	}
 `;
