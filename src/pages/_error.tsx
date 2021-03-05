@@ -1,8 +1,5 @@
 import Head from "next/head";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { faFrown } from "@fortawesome/free-regular-svg-icons";
+import Link from "next/link";
 
 import { ErrorFetch } from "types/interfaces/ErrorFetch";
 
@@ -14,9 +11,11 @@ const Error: React.FC<ErrorFetch> = ({ status, statusText }) => (
 			<title>{statusText} · D&apos;Bags</title>
 		</Head>
 		<Container>
-			<FontAwesomeIcon icon={faFrown} />
 			<h1>{status}</h1>
 			<p>{statusText}</p>
+			<Link href="/">
+				<a>PÁGINA INICIAL</a>
+			</Link>
 		</Container>
 	</>
 );
