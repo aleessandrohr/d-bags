@@ -48,7 +48,7 @@ export default class MyDocument extends Document {
 					/>
 					<meta name="keywords" content="dbags, loja, bolsas" />
 					<meta name="author" content="Alessandro Ramos" />
-					<meta name="robots" content="index,nofollow" />
+					<meta name="robots" content="all" />
 					<meta
 						name="google-site-verification"
 						content="6VEG1pJ38MUONeTeHCpbOoHyTaG9tQsPRMJ-3CfIofw"
