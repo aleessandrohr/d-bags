@@ -7,6 +7,10 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+	html, body {
+		min-height: 100%;
+	}
+
   html {
     font-size: 62.5%;
   }
@@ -14,12 +18,17 @@ export default createGlobalStyle`
   body {
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.primary};
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: "Roboto", Segoe UI Emoji, Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
+		overflow-x: hidden;
   }
 
+	main {
+		min-height: calc(100vh - 5.2rem);
+	}
+
   ::-webkit-scrollbar {
-    width: 5px;
+    width: 3px;
     background-color: ${({ theme }) => theme.colors["scroll-y"]};
   }
 
@@ -31,18 +40,6 @@ export default createGlobalStyle`
   @media (max-width: 768px) {
     html {
       font-size: 57.5%;
-    }
-  }
-
-  @media (max-width: 320px) {
-    html {
-      font-size: 55.5%;
-    }
-  }
-
-  @media (max-width: 280px) {
-    html {
-      font-size: 52.5%;
     }
   }
 `;
