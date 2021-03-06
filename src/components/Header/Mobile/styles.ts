@@ -12,7 +12,7 @@ export const Menu = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 5.2rem;
+	height: 5.6rem;
 `;
 
 export const Logo = styled.a`

@@ -6,7 +6,7 @@ export const Container = styled.nav`
 	justify-content: space-between;
 	width: 100%;
 	max-width: 1100px;
-	height: 5.2rem;
+	height: 5.6rem;
 
 	@media (max-width: 768px) {
 		display: none;
