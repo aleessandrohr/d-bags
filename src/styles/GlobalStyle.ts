@@ -24,7 +24,7 @@ export default createGlobalStyle`
   }
 
 	main {
-		min-height: calc(100vh - 5.2rem);
+		min-height: calc(100vh - 5.6rem);
 	}
 
   ::-webkit-scrollbar {
