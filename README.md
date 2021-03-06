@@ -19,7 +19,7 @@ Access the page by clicking [here](https://dbags.vercel.app).
 
 ## Getting the code
 
-As a prerequisite, it is necessary to install [NodeJS](https://nodejs.org/en/download/) or [Yarn](https://classic.yarnpkg.com/en/docs/install) in your LTS version.
+As a prerequisite, it is necessary to install [NodeJS](https://nodejs.org/en/download/) or [Yarn](https://classic.yarnpkg.com/en/docs/install) in its LTS version.
 
 With these applications installed, open the terminal in the folder of your choice. Then, run the following commands, in sequence:
 
