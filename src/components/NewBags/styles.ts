@@ -7,7 +7,7 @@ export const Container = styled.section`
 	justify-content: center;
 
 	> h1 {
-		font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+		font-family: "Roboto Mono", Segoe UI Emoji, Arial, Helvetica, sans-serif;
 		font-size: 4rem;
 		padding: 2rem;
 	}
