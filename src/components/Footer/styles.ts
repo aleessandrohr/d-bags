@@ -48,6 +48,7 @@ export const Theme = styled.div`
 	border-radius: 7px;
 	box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.shadow};
 	padding: 0.6rem 1.6rem;
+	margin: 1rem;
 `;
 
 export const Moon = styled.button`
