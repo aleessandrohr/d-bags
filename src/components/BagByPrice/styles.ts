@@ -33,7 +33,7 @@ export const Description = styled.div`
 		justify-content: center;
 		background-color: ${({ theme }) => theme.colors.blue};
 		color: ${({ theme }) => theme.colors.white};
-		font-family: "Roboto Mono", Segoe UI Emoji, Arial, Helvetica, sans-serif;
+		font-family: "Roboto Mono", "Courier New", Courier, monospace;
 		font-size: 1.8rem;
 		text-decoration: none;
 		border-radius: 7px;

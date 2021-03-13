@@ -23,7 +23,7 @@ export const Container = styled.main`
 		justify-content: center;
 		background-color: ${({ theme }) => theme.colors.blue};
 		color: ${({ theme }) => theme.colors.white};
-		font-family: "Roboto Mono", Segoe UI Emoji, Arial, Helvetica, sans-serif;
+		font-family: "Roboto Mono", "Courier New", Courier, monospace;
 		text-decoration: none;
 		border-radius: 5px;
 		box-shadow: 3px 3px 5px ${({ theme }) => theme.colors.shadow};

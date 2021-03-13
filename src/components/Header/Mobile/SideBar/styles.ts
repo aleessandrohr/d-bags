@@ -16,7 +16,7 @@ export const Menu = styled.div`
 `;
 
 export const Logo = styled.a`
-	font-family: "Roboto Mono", Segoe UI Emoji, Arial, Helvetica, sans-serif;
+	font-family: "Roboto Mono", "Courier New", Courier, monospace;
 	font-size: 3.2rem;
 	font-weight: 600;
 	cursor: pointer;

@@ -24,7 +24,7 @@ export const Flex = styled.div`
 
 export const Items = styled.div`
 	> h1 {
-		font-family: "Roboto Mono", Segoe UI Emoji, Arial, Helvetica, sans-serif;
+		font-family: "Roboto Mono", "Courier New", Courier, monospace;
 		font-size: 2.8rem;
 		font-weight: 600;
 	}

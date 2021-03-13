@@ -18,7 +18,7 @@ export default createGlobalStyle`
   body {
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.primary};
-    font-family: "Roboto", Segoe UI Emoji, Arial, Helvetica, sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
 		overflow-x: hidden;
   }
@@ -39,7 +39,7 @@ export default createGlobalStyle`
 
   @media (max-width: 768px) {
     html {
-      font-size: 57.5%;
+      font-size: 60.5%;
     }
   }
 `;

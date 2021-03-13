@@ -15,7 +15,7 @@ export const Container = styled.nav`
 
 export const Logo = styled.a`
 	color: ${({ theme }) => theme.colors.primary};
-	font-family: "Roboto Mono", Segoe UI Emoji, Arial, Helvetica, sans-serif;
+	font-family: "Roboto Mono", "Courier New", Courier, monospace;
 	font-size: 3.2rem;
 	font-weight: 600;
 	text-decoration: none;
