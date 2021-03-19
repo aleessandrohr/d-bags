@@ -64,7 +64,7 @@ export const Title = styled.h1`
 
 export const Price = styled.span`
 	font-size: 1.8rem;
-	font-weight: 200;
+	font-weight: 300;
 	text-decoration: line-through;
 	padding: 0.4rem 0.8rem;
 `;
