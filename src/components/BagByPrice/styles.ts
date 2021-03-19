@@ -34,7 +34,7 @@ export const Description = styled.div`
 		background-color: ${({ theme }) => theme.colors.blue};
 		color: ${({ theme }) => theme.colors.white};
 		font-family: "Roboto Mono", "Courier New", Courier, monospace;
-		font-size: 1.8rem;
+		font-size: 2rem;
 		text-decoration: none;
 		border-radius: 7px;
 		border: 2px solid transparent;
