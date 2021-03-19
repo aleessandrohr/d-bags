@@ -11,11 +11,15 @@ const Error: React.FC<ErrorFetch> = ({ status, statusText }) => (
 			<title>{statusText} · D&apos;Bags</title>
 		</Head>
 		<Container>
-			<h1>{status}</h1>
-			<p>{statusText}</p>
-			<Link href="/">
-				<a>PÁGINA INICIAL</a>
-			</Link>
+			<section>
+				<h1>{status}</h1>
+				<p>{statusText}</p>
+				<Link href="/">
+					<a>
+						<span>Página inicial</span>
+					</a>
+				</Link>
+			</section>
 		</Container>
 	</>
 );
