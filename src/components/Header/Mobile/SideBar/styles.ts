@@ -36,7 +36,7 @@ export const Close = styled.button`
 
 	> svg {
 		color: ${({ theme }) => theme.colors.primary};
-		font-size: 3.8rem;
+		font-size: 3.6rem;
 	}
 `;
 
