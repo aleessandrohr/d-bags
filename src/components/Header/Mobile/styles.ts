@@ -36,6 +36,6 @@ export const Bar = styled.button`
 
 	> svg {
 		color: ${({ theme }) => theme.colors.primary};
-		font-size: 3rem;
+		font-size: 2.8rem;
 	}
 `;
