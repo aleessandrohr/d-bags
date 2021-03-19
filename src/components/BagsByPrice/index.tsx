@@ -3,6 +3,7 @@ import { GetStaticProps } from "next";
 import useSWR from "swr";
 
 import { BagByPrice } from "components/BagByPrice";
+import { Error } from "components/Error";
 
 import { fetcher } from "helpers/fetcher";
 
@@ -11,7 +12,6 @@ import { IBagByPrice } from "types/interfaces/IBagByPrice";
 
 import { Container } from "./styles";
 
-import { Error } from "./Error";
 import { Loading } from "./Loading/";
 
 interface Props {
