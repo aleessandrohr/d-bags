@@ -30,7 +30,6 @@ export const Items = styled.div`
 	}
 
 	> p {
-		font-weight: 200;
 		padding: 1rem 0;
 	}
 
