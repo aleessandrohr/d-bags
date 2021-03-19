@@ -2,7 +2,8 @@ import { GetStaticProps } from "next";
 
 import useSWR from "swr";
 
-import { NewBag } from "components/NewBag/index";
+import { Error } from "components/Error";
+import { NewBag } from "components/NewBag";
 
 import { fetcher } from "helpers/fetcher";
 
@@ -11,7 +12,6 @@ import { INewBag } from "types/interfaces/INewBag";
 
 import { Container } from "./styles";
 
-import { Error } from "./Error";
 import { Loading } from "./Loading/";
 
 interface Props {
